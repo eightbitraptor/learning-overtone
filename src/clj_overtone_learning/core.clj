@@ -1,12 +1,23 @@
 (ns clj-overtone-learning.core
   (:use [overtone.live]
+        [overtone.synth.stringed]
         [overtone.inst.drum]
         [overtone.inst.piano]))
+
+(def g (guitar))
+
+;; bow down to the power chord!
+(ctl g :pre-amp 4.0 :distort 0.99)
+(guitar-strum g [0 2 2 -1 -1 -1])
+(guitar-strum g [3 5 5 -1 -1 -1])
+
+
+
 
 (defn play-chord [a-chord]
   (doseq [note a-chord] (piano note)))
 
-(play-chord (chord :D5 :major))
+(play-chord (chord :D3 :major))
 
 (def three-twenty-bpm (metronome 320))
 
