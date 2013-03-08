@@ -1,0 +1,1284 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f03a10bfe84, pid=13923, tid=139650538227456
+#
+# JRE version: 7.0_17-b02
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libpthread.so.0+0x9e84]  pthread_mutex_lock+0x4
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f0310011800):  JavaThread "Thread-11" daemon [_thread_in_native, id=14275, stack(0x00007f02eca94000,0x00007f02ecb95000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=2 (SEGV_ACCERR), si_addr=0x00007f03121a25a8
+
+Registers:
+RAX=0x00007f0334003400, RBX=0x00007f031800fa00, RCX=0x0000000000010000, RDX=0x00007f03a0a263ce
+RSP=0x00007f02ecb92910, RBP=0x00007f0334004330, RSI=0x00007f0334004330, RDI=0x00007f03121a2598
+R8 =0x00007f03340034f8, R9 =0x0000000000000000, R10=0x00007f02ecb928b0, R11=0x00007f03a0a5f4d0
+R12=0x0000000000000000, R13=0x00007f02ecb93140, R14=0x00007f02ecb93030, R15=0x0000000000000000
+RIP=0x00007f03a10bfe84, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f02ecb92910)
+0x00007f02ecb92910:   00007f02ecb92940 00007f033e4d37cd
+0x00007f02ecb92920:   000000760000000c 0000000000000020
+0x00007f02ecb92930:   00007f02ecb92960 00007f034453ff30
+0x00007f02ecb92940:   0000000000000020 00007f02ecb92960
+0x00007f02ecb92950:   00007f034453ff30 00007f033e748034
+0x00007f02ecb92960:   0000000000000006 00007f02ecb931c0
+0x00007f02ecb92970:   00007f02ecb92a40 00007f033e747a61
+0x00007f02ecb92980:   00007f02ecb929b0 0000000000008000
+0x00007f02ecb92990:   00007f02ecb92a70 00007f02ecb928b0
+0x00007f02ecb929a0:   00007f0300000000 00007f02ecb93030
+0x00007f02ecb929b0:   00007f034453ff30 00007f033e4d1ef0
+0x00007f02ecb929c0:   00007f02ecb931c0 00007f02ecb928b0
+0x00007f02ecb929d0:   00007f0344242820 0000000400000000
+0x00007f02ecb929e0:   0000000000000020 00007f02ecb92960
+0x00007f02ecb929f0:   00007f0200000001 00007f03100119d8
+0x00007f02ecb92a00:   0000000000000001 06cfd00f4624fb00
+0x00007f02ecb92a10:   00007f033e749fcc 0000000000000003
+0x00007f02ecb92a20:   0000000000000004 0000000000000006
+0x00007f02ecb92a30:   00007f033e749fcc 00007f02ecb93138
+0x00007f02ecb92a40:   00007f02ecb93010 00007f033e73d1a5
+0x00007f02ecb92a50:   00007f02ecb92aa0 00007f03a03a2180
+0x00007f02ecb92a60:   0000000000000006 00007f0310011800
+0x00007f02ecb92a70:   00007f033400a0d0 00007f033e73cfec
+0x00007f02ecb92a80:   00007f0310011800 00007f036095bbb0
+0x00007f02ecb92a90:   0000000000000000 0000000000000000
+0x00007f02ecb92aa0:   00007f03a011ca20 0000000000000000
+0x00007f02ecb92ab0:   00007f0392b15250 00007f0310011800
+0x00007f02ecb92ac0:   0000000000000000 0000000000000000
+0x00007f02ecb92ad0:   00007f0334002790 0000000000000000
+0x00007f02ecb92ae0:   00000000827724a0 00007f02ecb92b38
+0x00007f02ecb92af0:   00000000827734d0 0000000000000000
+0x00007f02ecb92b00:   00000000827724b0 0000000000000000 
+
+Instructions: (pc=0x00007f03a10bfe84)
+0x00007f03a10bfe64:   0f 1f 40 00 c7 47 10 ff ff ff ff 31 c0 c3 90 90
+0x00007f03a10bfe74:   90 90 90 90 90 90 90 90 90 90 90 90 48 83 ec 08
+0x00007f03a10bfe84:   8b 77 10 49 89 f8 89 f7 83 e7 7f 40 f6 c7 7c 75
+0x00007f03a10bfe94:   3d 64 44 8b 0c 25 d0 02 00 00 85 ff 75 59 81 e6 
+
+Register to memory mapping:
+
+RAX=0x00007f0334003400 is an unknown value
+RBX=0x00007f031800fa00 is an unknown value
+RCX=0x0000000000010000 is an unknown value
+RDX=0x00007f03a0a263ce: <offset 0x14a3ce> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f03a08dc000
+RSP=0x00007f02ecb92910 is pointing into the stack for thread: 0x00007f0310011800
+RBP=0x00007f0334004330 is an unknown value
+RSI=0x00007f0334004330 is an unknown value
+RDI=0x00007f03121a2598 is an unknown value
+R8 =0x00007f03340034f8 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x00007f02ecb928b0 is pointing into the stack for thread: 0x00007f0310011800
+R11=0x00007f03a0a5f4d0: <offset 0x1834d0> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f03a08dc000
+R12=0x0000000000000000 is an unknown value
+R13=0x00007f02ecb93140 is pointing into the stack for thread: 0x00007f0310011800
+R14=0x00007f02ecb93030 is pointing into the stack for thread: 0x00007f0310011800
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x00007f02eca94000,0x00007f02ecb95000],  sp=0x00007f02ecb92910,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libpthread.so.0+0x9e84]  pthread_mutex_lock+0x4
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  overtone.sc.machinery.server.native.lib_283c4120_0e37_4f73_8d8d_36db2514f960.World_SendPacket(Lcom/sun/jna/Pointer;ILjava/nio/ByteBuffer;Lovertone/sc/machinery/server/native/callback_98894b43_db9f_4af1_a0cd_6e74afc526d3;)B+0
+j  overtone.sc.machinery.server.native$eval3492$fn__3493.invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+29
+j  overtone.sc.machinery.server.native$scsynth_send.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+106
+j  overtone.sc.machinery.server.connection$connect_internal$send_fn__3548.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+32
+j  overtone.osc.peer$send_loop$fn__2367.invoke()Ljava/lang/Object;+182
+j  overtone.osc.peer$send_loop.invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+236
+J  clojure.lang.AFn.applyToHelper(Lclojure/lang/IFn;Lclojure/lang/ISeq;)Ljava/lang/Object;
+J  clojure.lang.AFn.applyTo(Lclojure/lang/ISeq;)Ljava/lang/Object;
+J  clojure.core$apply.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+j  overtone.osc.peer$sender_thread$fn__2428.invoke()Ljava/lang/Object;+19
+J  clojure.lang.AFn.run()V
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f034c012000 JavaThread "nREPL-worker-6" daemon [_thread_blocked, id=15130, stack(0x00007f0326bea000,0x00007f0326ceb000)]
+  0x00007f03544a8800 JavaThread "pool-6-thread-6" [_thread_blocked, id=14299, stack(0x00007f02ec28c000,0x00007f02ec38d000)]
+  0x00007f034c017000 JavaThread "pool-6-thread-5" [_thread_blocked, id=14298, stack(0x00007f02ec38d000,0x00007f02ec48e000)]
+  0x00007f0348009000 JavaThread "pool-6-thread-4" [_thread_blocked, id=14297, stack(0x00007f02ec48e000,0x00007f02ec58f000)]
+  0x00007f034c016800 JavaThread "pool-6-thread-3" [_thread_blocked, id=14296, stack(0x00007f02ec58f000,0x00007f02ec690000)]
+  0x00007f034c015800 JavaThread "pool-6-thread-2" [_thread_blocked, id=14295, stack(0x00007f02ec690000,0x00007f02ec791000)]
+  0x00007f033000d000 JavaThread "pool-6-thread-1" [_thread_blocked, id=14294, stack(0x00007f02ec791000,0x00007f02ec892000)]
+=>0x00007f0310011800 JavaThread "Thread-11" daemon [_thread_in_native, id=14275, stack(0x00007f02eca94000,0x00007f02ecb95000)]
+  0x00007f0354307800 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=14265, stack(0x00007f0326ceb000,0x00007f0326dec000)]
+  0x00007f035414a000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=14262, stack(0x00007f038c689000,0x00007f038c78a000)]
+  0x00007f035411f000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=14261, stack(0x00007f038c184000,0x00007f038c285000)]
+  0x00007f034473d000 JavaThread "pool-1-thread-6" [_thread_blocked, id=13974, stack(0x00007f03279fa000,0x00007f0327afb000)]
+  0x00007f0344728000 JavaThread "pool-1-thread-5" [_thread_blocked, id=13973, stack(0x00007f0327afb000,0x00007f0327bfc000)]
+  0x00007f0344644800 JavaThread "pool-1-thread-4" [_thread_blocked, id=13972, stack(0x00007f0327bfc000,0x00007f0327cfd000)]
+  0x00007f03445c5000 JavaThread "pool-1-thread-3" [_thread_blocked, id=13971, stack(0x00007f0327cfd000,0x00007f0327dfe000)]
+  0x00007f03445b9000 JavaThread "pool-1-thread-2" [_thread_blocked, id=13970, stack(0x00007f0327dfe000,0x00007f0327eff000)]
+  0x00007f03445bd800 JavaThread "pool-1-thread-1" [_thread_blocked, id=13969, stack(0x00007f0327eff000,0x00007f0328000000)]
+  0x00007f0334001000 JavaThread "pool-2-thread-6" [_thread_blocked, id=13968, stack(0x00007f033c0cd000,0x00007f033c1ce000)]
+  0x00007f0338005800 JavaThread "pool-2-thread-5" [_thread_blocked, id=13967, stack(0x00007f033c1ce000,0x00007f033c2cf000)]
+  0x00007f0330001800 JavaThread "pool-2-thread-4" [_thread_blocked, id=13966, stack(0x00007f033c2cf000,0x00007f033c3d0000)]
+  0x00007f0338004000 JavaThread "pool-2-thread-3" [_thread_blocked, id=13965, stack(0x00007f033c3d0000,0x00007f033c4d1000)]
+  0x00007f0338002000 JavaThread "pool-2-thread-2" [_thread_blocked, id=13964, stack(0x00007f033c4d1000,0x00007f033c5d2000)]
+  0x00007f03444ba000 JavaThread "pool-2-thread-1" [_thread_blocked, id=13963, stack(0x00007f038c083000,0x00007f038c184000)]
+  0x00007f0348005000 JavaThread "clojure-agent-send-off-pool-4" [_thread_in_native, id=13947, stack(0x00007f038c285000,0x00007f038c386000)]
+  0x00007f0348003800 JavaThread "clojure-agent-send-off-pool-3" [_thread_blocked, id=13946, stack(0x00007f038c386000,0x00007f038c487000)]
+  0x00007f0398769000 JavaThread "clojure-agent-send-off-pool-2" [_thread_in_native, id=13945, stack(0x00007f038c487000,0x00007f038c588000)]
+  0x00007f03980f4000 JavaThread "Service Thread" daemon [_thread_blocked, id=13939, stack(0x00007f038cd19000,0x00007f038ce1a000)]
+  0x00007f03980f2000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=13938, stack(0x00007f038ce1a000,0x00007f038cf1b000)]
+  0x00007f03980f0000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=13937, stack(0x00007f038cf1b000,0x00007f038d01c000)]
+  0x00007f03980ed000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=13936, stack(0x00007f038d01c000,0x00007f038d11d000)]
+  0x00007f03980eb000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13935, stack(0x00007f038d11d000,0x00007f038d21e000)]
+  0x00007f039809d800 JavaThread "Finalizer" daemon [_thread_blocked, id=13934, stack(0x00007f038d907000,0x00007f038da08000)]
+  0x00007f039809b800 JavaThread "Reference Handler" daemon [_thread_blocked, id=13933, stack(0x00007f038da08000,0x00007f038db09000)]
+  0x00007f039800a800 JavaThread "main" [_thread_blocked, id=13925, stack(0x00007f03a13d3000,0x00007f03a14d4000)]
+
+Other Threads:
+  0x00007f0398094000 VMThread [stack: 0x00007f038db09000,0x00007f038dc0a000] [id=13932]
+  0x00007f03980ff000 WatcherThread [stack: 0x00007f038cc18000,0x00007f038cd19000] [id=13940]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 427520K, used 174139K [0x00000000d7d60000, 0x00000000fbae0000, 0x0000000100000000)
+  eden space 427200K, 40% used [0x00000000d7d60000,0x00000000e271ec78,0x00000000f1e90000)
+  from space 320K, 100% used [0x00000000fba90000,0x00000000fbae0000,0x00000000fbae0000)
+  to   space 12992K, 0% used [0x00000000fa180000,0x00000000fa180000,0x00000000fae30000)
+ ParOldGen       total 82304K, used 47474K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 57% used [0x0000000087800000,0x000000008a65cb80,0x000000008c860000)
+ PSPermGen       total 42944K, used 42891K [0x0000000082600000, 0x0000000084ff0000, 0x0000000087800000)
+  object space 42944K, 99% used [0x0000000082600000,0x0000000084fe2ef0,0x0000000084ff0000)
+
+Card table byte_map: [0x00007f039e2b4000,0x00007f039e6a2000] byte_map_base: 0x00007f039dea1000
+
+Polling page: 0x00007f03a14f2000
+
+Code Cache  [0x00007f0392000000, 0x00007f0393120000, 0x00007f0398000000)
+ total_blobs=4099 nmethods=3642 adapters=375 free_code_cache=80885Kb largest_free_block=82729856
+
+Compilation events (10 events):
+Event: 699.898 Thread 0x00007f03980f2000 5033       3       clj_overtone_learning.core$eval15997$iter__16000__16006$fn__16007$iter__16002__16008$fn__16009::invoke (438 byte
+Event: 699.900 Thread 0x00007f03980f2000 nmethod 5033 0x00007f0393115a10 code [0x00007f0393115f00, 0x00007f03931193d8]
+Event: 699.904 Thread 0x00007f03980f2000 5031       3       clj_overtone_learning.core$eval15997$iter__16000__16006$fn__16007$iter__16002__16008$fn__16009::<init> (20 bytes
+Event: 699.904 Thread 0x00007f03980f2000 nmethod 5031 0x00007f03925f5e50 code [0x00007f03925f5fc0, 0x00007f03925f6290]
+Event: 699.908 Thread 0x00007f03980f2000 5032       3       clj_overtone_learning.core$eval15997$fn__15998::invoke (18 bytes)
+Event: 699.909 Thread 0x00007f03980f2000 nmethod 5032 0x00007f03931148d0 code [0x00007f0393114a60, 0x00007f0393114f18]
+Event: 699.973 Thread 0x00007f03980f2000 5034       3       clj_overtone_learning.core$eval16033$fn__16034::invoke (18 bytes)
+Event: 699.974 Thread 0x00007f03980f2000 nmethod 5034 0x00007f0393101350 code [0x00007f03931014e0, 0x00007f0393101998]
+Event: 702.125 Thread 0x00007f03980f2000 5035       3       clojure.lang.Var::invoke (12 bytes)
+Event: 702.126 Thread 0x00007f03980f2000 nmethod 5035 0x00007f0393100a10 code [0x00007f0393100ba0, 0x00007f0393101198]
+
+GC Heap History (10 events):
+Event: 275.714 GC heap before
+{Heap before GC invocations=18 (full 0):
+ PSYoungGen      total 543808K, used 543792K [0x00000000d7d60000, 0x00000000fe420000, 0x0000000100000000)
+  eden space 543360K, 100% used [0x00000000d7d60000,0x00000000f9000000,0x00000000f9000000)
+  from space 448K, 96% used [0x00000000fc770000,0x00000000fc7dc010,0x00000000fc7e0000)
+  to   space 14848K, 0% used [0x00000000fd5a0000,0x00000000fd5a0000,0x00000000fe420000)
+ ParOldGen       total 82304K, used 45754K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 55% used [0x0000000087800000,0x000000008a4aeb60,0x000000008c860000)
+ PSPermGen       total 40448K, used 40305K [0x0000000082600000, 0x0000000084d80000, 0x0000000087800000)
+  object space 40448K, 99% used [0x0000000082600000,0x0000000084d5c470,0x0000000084d80000)
+Event: 275.719 GC heap after
+Heap after GC invocations=18 (full 0):
+ PSYoungGen      total 518144K, used 448K [0x00000000d7d60000, 0x00000000fd610000, 0x0000000100000000)
+  eden space 517696K, 0% used [0x00000000d7d60000,0x00000000d7d60000,0x00000000f76f0000)
+  from space 448K, 100% used [0x00000000fd5a0000,0x00000000fd610000,0x00000000fd610000)
+  to   space 14656K, 0% used [0x00000000fb970000,0x00000000fb970000,0x00000000fc7c0000)
+ ParOldGen       total 82304K, used 46138K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 56% used [0x0000000087800000,0x000000008a50eb60,0x000000008c860000)
+ PSPermGen       total 40448K, used 40305K [0x0000000082600000, 0x0000000084d80000, 0x0000000087800000)
+  object space 40448K, 99% used [0x0000000082600000,0x0000000084d5c470,0x0000000084d80000)
+}
+Event: 298.107 GC heap before
+{Heap before GC invocations=19 (full 0):
+ PSYoungGen      total 518144K, used 518144K [0x00000000d7d60000, 0x00000000fd610000, 0x0000000100000000)
+  eden space 517696K, 100% used [0x00000000d7d60000,0x00000000f76f0000,0x00000000f76f0000)
+  from space 448K, 100% used [0x00000000fd5a0000,0x00000000fd610000,0x00000000fd610000)
+  to   space 14656K, 0% used [0x00000000fb970000,0x00000000fb970000,0x00000000fc7c0000)
+ ParOldGen       total 82304K, used 46138K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 56% used [0x0000000087800000,0x000000008a50eb60,0x000000008c860000)
+ PSPermGen       total 41024K, used 40953K [0x0000000082600000, 0x0000000084e10000, 0x0000000087800000)
+  object space 41024K, 99% used [0x0000000082600000,0x0000000084dfe7e8,0x0000000084e10000)
+Event: 298.113 GC heap after
+Heap after GC invocations=19 (full 0):
+ PSYoungGen      total 493760K, used 432K [0x00000000d7d60000, 0x00000000fd5b0000, 0x0000000100000000)
+  eden space 493312K, 0% used [0x00000000d7d60000,0x00000000d7d60000,0x00000000f5f20000)
+  from space 448K, 96% used [0x00000000fb970000,0x00000000fb9dc010,0x00000000fb9e0000)
+  to   space 14336K, 0% used [0x00000000fc7b0000,0x00000000fc7b0000,0x00000000fd5b0000)
+ ParOldGen       total 82304K, used 46514K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 56% used [0x0000000087800000,0x000000008a56cb60,0x000000008c860000)
+ PSPermGen       total 41024K, used 40953K [0x0000000082600000, 0x0000000084e10000, 0x0000000087800000)
+  object space 41024K, 99% used [0x0000000082600000,0x0000000084dfe7e8,0x0000000084e10000)
+}
+Event: 408.297 GC heap before
+{Heap before GC invocations=20 (full 0):
+ PSYoungGen      total 493760K, used 493744K [0x00000000d7d60000, 0x00000000fd5b0000, 0x0000000100000000)
+  eden space 493312K, 100% used [0x00000000d7d60000,0x00000000f5f20000,0x00000000f5f20000)
+  from space 448K, 96% used [0x00000000fb970000,0x00000000fb9dc010,0x00000000fb9e0000)
+  to   space 14336K, 0% used [0x00000000fc7b0000,0x00000000fc7b0000,0x00000000fd5b0000)
+ ParOldGen       total 82304K, used 46514K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 56% used [0x0000000087800000,0x000000008a56cb60,0x000000008c860000)
+ PSPermGen       total 41600K, used 41564K [0x0000000082600000, 0x0000000084ea0000, 0x0000000087800000)
+  object space 41600K, 99% used [0x0000000082600000,0x0000000084e97148,0x0000000084ea0000)
+Event: 408.302 GC heap after
+Heap after GC invocations=20 (full 0):
+ PSYoungGen      total 470592K, used 432K [0x00000000d7d60000, 0x00000000fc820000, 0x0000000100000000)
+  eden space 470144K, 0% used [0x00000000d7d60000,0x00000000d7d60000,0x00000000f4880000)
+  from space 448K, 96% used [0x00000000fc7b0000,0x00000000fc81c010,0x00000000fc820000)
+  to   space 13952K, 0% used [0x00000000face0000,0x00000000face0000,0x00000000fba80000)
+ ParOldGen       total 82304K, used 46874K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 56% used [0x0000000087800000,0x000000008a5c6b60,0x000000008c860000)
+ PSPermGen       total 41600K, used 41564K [0x0000000082600000, 0x0000000084ea0000, 0x0000000087800000)
+  object space 41600K, 99% used [0x0000000082600000,0x0000000084e97148,0x0000000084ea0000)
+}
+Event: 475.076 GC heap before
+{Heap before GC invocations=21 (full 0):
+ PSYoungGen      total 470592K, used 470576K [0x00000000d7d60000, 0x00000000fc820000, 0x0000000100000000)
+  eden space 470144K, 100% used [0x00000000d7d60000,0x00000000f4880000,0x00000000f4880000)
+  from space 448K, 96% used [0x00000000fc7b0000,0x00000000fc81c010,0x00000000fc820000)
+  to   space 13952K, 0% used [0x00000000face0000,0x00000000face0000,0x00000000fba80000)
+ ParOldGen       total 82304K, used 46874K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 56% used [0x0000000087800000,0x000000008a5c6b60,0x000000008c860000)
+ PSPermGen       total 42176K, used 42147K [0x0000000082600000, 0x0000000084f30000, 0x0000000087800000)
+  object space 42176K, 99% used [0x0000000082600000,0x0000000084f28ff8,0x0000000084f30000)
+Event: 475.081 GC heap after
+Heap after GC invocations=21 (full 0):
+ PSYoungGen      total 462080K, used 352K [0x00000000d7d60000, 0x00000000fc7c0000, 0x0000000100000000)
+  eden space 448128K, 0% used [0x00000000d7d60000,0x00000000d7d60000,0x00000000f3300000)
+  from space 13952K, 2% used [0x00000000face0000,0x00000000fad38000,0x00000000fba80000)
+  to   space 13504K, 0% used [0x00000000fba90000,0x00000000fba90000,0x00000000fc7c0000)
+ ParOldGen       total 82304K, used 47198K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 57% used [0x0000000087800000,0x000000008a617b70,0x000000008c860000)
+ PSPermGen       total 42176K, used 42147K [0x0000000082600000, 0x0000000084f30000, 0x0000000087800000)
+  object space 42176K, 99% used [0x0000000082600000,0x0000000084f28ff8,0x0000000084f30000)
+}
+Event: 696.525 GC heap before
+{Heap before GC invocations=22 (full 0):
+ PSYoungGen      total 462080K, used 448480K [0x00000000d7d60000, 0x00000000fc7c0000, 0x0000000100000000)
+  eden space 448128K, 100% used [0x00000000d7d60000,0x00000000f3300000,0x00000000f3300000)
+  from space 13952K, 2% used [0x00000000face0000,0x00000000fad38000,0x00000000fba80000)
+  to   space 13504K, 0% used [0x00000000fba90000,0x00000000fba90000,0x00000000fc7c0000)
+ ParOldGen       total 82304K, used 47198K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 57% used [0x0000000087800000,0x000000008a617b70,0x000000008c860000)
+ PSPermGen       total 42752K, used 42709K [0x0000000082600000, 0x0000000084fc0000, 0x0000000087800000)
+  object space 42752K, 99% used [0x0000000082600000,0x0000000084fb56d0,0x0000000084fc0000)
+Event: 696.532 GC heap after
+Heap after GC invocations=22 (full 0):
+ PSYoungGen      total 427520K, used 320K [0x00000000d7d60000, 0x00000000fbae0000, 0x0000000100000000)
+  eden space 427200K, 0% used [0x00000000d7d60000,0x00000000d7d60000,0x00000000f1e90000)
+  from space 320K, 100% used [0x00000000fba90000,0x00000000fbae0000,0x00000000fbae0000)
+  to   space 12992K, 0% used [0x00000000fa180000,0x00000000fa180000,0x00000000fae30000)
+ ParOldGen       total 82304K, used 47474K [0x0000000087800000, 0x000000008c860000, 0x00000000d7d60000)
+  object space 82304K, 57% used [0x0000000087800000,0x000000008a65cb80,0x000000008c860000)
+ PSPermGen       total 42752K, used 42709K [0x0000000082600000, 0x0000000084fc0000, 0x0000000087800000)
+  object space 42752K, 99% used [0x0000000082600000,0x0000000084fb56d0,0x0000000084fc0000)
+}
+
+Deoptimization events (10 events):
+Event: 99.693 Thread 0x00007f034c012000 Uncommon trap -34 fr.pc 0x00007f0392be7f70
+Event: 99.816 Thread 0x00007f0344728000 Uncommon trap -83 fr.pc 0x00007f039227308c
+Event: 189.496 Thread 0x00007f034c012000 Uncommon trap -34 fr.pc 0x00007f0392133cc4
+Event: 189.496 Thread 0x00007f034c012000 Uncommon trap -58 fr.pc 0x00007f0392913e80
+Event: 343.058 Thread 0x00007f034c012000 Uncommon trap -34 fr.pc 0x00007f0392133cc4
+Event: 343.058 Thread 0x00007f034c012000 Uncommon trap -58 fr.pc 0x00007f0392913e80
+Event: 485.150 Thread 0x00007f034c012000 Uncommon trap -34 fr.pc 0x00007f0392133cc4
+Event: 485.150 Thread 0x00007f034c012000 Uncommon trap -58 fr.pc 0x00007f0392913e80
+Event: 491.879 Thread 0x00007f034c012000 Uncommon trap -34 fr.pc 0x00007f0392133cc4
+Event: 491.879 Thread 0x00007f034c012000 Uncommon trap -58 fr.pc 0x00007f0392913e80
+
+Internal exceptions (10 events):
+Event: 700.012 Thread 0x00007f034c012000 Threw 0x00000000e2332ad8 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.012 Thread 0x00007f034c012000 Threw 0x00000000e2335cd8 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.012 Thread 0x00007f034c012000 Threw 0x00000000e2336188 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.012 Thread 0x00007f034c012000 Threw 0x00000000e2336638 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.012 Thread 0x00007f034c012000 Threw 0x00000000e2336ae8 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.012 Thread 0x00007f034c012000 Threw 0x00000000e2337290 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.013 Thread 0x00007f034c012000 Threw 0x00000000e233a490 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.013 Thread 0x00007f034c012000 Threw 0x00000000e233a940 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.013 Thread 0x00007f034c012000 Threw 0x00000000e233adf0 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 700.013 Thread 0x00007f034c012000 Threw 0x00000000e233b2a0 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+
+Events (10 events):
+Event: 699.967 loading class 0x00007f03980d4960
+Event: 699.967 loading class 0x00007f03980d4960 done
+Event: 699.968 loading class 0x00007f03980d4960
+Event: 699.968 loading class 0x00007f03980d4960 done
+Event: 699.968 loading class 0x00007f03980d4960
+Event: 699.968 loading class 0x00007f03980d4960 done
+Event: 700.012 loading class 0x00007f031800b550
+Event: 700.012 loading class 0x00007f031800b550 done
+Event: 700.012 loading class 0x00007f031800b550
+Event: 700.012 loading class 0x00007f031800b550 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 3811669                            /usr/lib/jvm/java-7-oracle/jre/bin/java
+00600000-00601000 rw-p 00000000 08:01 3811669                            /usr/lib/jvm/java-7-oracle/jre/bin/java
+0137b000-0139c000 rw-p 00000000 00:00 0                                  [heap]
+82600000-84ff0000 rw-p 00000000 00:00 0 
+84ff0000-87800000 rw-p 00000000 00:00 0 
+87800000-8c860000 rw-p 00000000 00:00 0 
+8c860000-d7d60000 rw-p 00000000 00:00 0 
+d7d60000-fbae0000 rw-p 00000000 00:00 0 
+fbae0000-100000000 ---p 00000000 00:00 0 
+7f02ec28c000-7f02ec28f000 ---p 00000000 00:00 0 
+7f02ec28f000-7f02ec38d000 rw-p 00000000 00:00 0                          [stack:14299]
+7f02ec38d000-7f02ec390000 ---p 00000000 00:00 0 
+7f02ec390000-7f02ec48e000 rw-p 00000000 00:00 0                          [stack:14298]
+7f02ec48e000-7f02ec491000 ---p 00000000 00:00 0 
+7f02ec491000-7f02ec58f000 rw-p 00000000 00:00 0                          [stack:14297]
+7f02ec58f000-7f02ec592000 ---p 00000000 00:00 0 
+7f02ec592000-7f02ec690000 rw-p 00000000 00:00 0                          [stack:14296]
+7f02ec690000-7f02ec693000 ---p 00000000 00:00 0 
+7f02ec693000-7f02ec791000 rw-p 00000000 00:00 0                          [stack:14295]
+7f02ec791000-7f02ec794000 ---p 00000000 00:00 0 
+7f02ec794000-7f02ec892000 rw-p 00000000 00:00 0                          [stack:14294]
+7f02ec892000-7f02ec895000 ---p 00000000 00:00 0 
+7f02ec895000-7f02ec993000 rw-p 00000000 00:00 0 
+7f02ec993000-7f02ec996000 ---p 00000000 00:00 0 
+7f02ec996000-7f02eca94000 rw-p 00000000 00:00 0 
+7f02eca94000-7f02eca97000 ---p 00000000 00:00 0 
+7f02eca97000-7f02ecb95000 rw-p 00000000 00:00 0                          [stack:14275]
+7f02ecb95000-7f02ecb96000 ---p 00000000 00:00 0 
+7f02ecb96000-7f02ed3e6000 rw-p 00000000 00:00 0                          [stack:14274]
+7f02ed3e6000-7f02ed3e7000 ---p 00000000 00:00 0 
+7f02ed3e7000-7f02ed467000 rw-p 00000000 00:00 0 
+7f02f22d7000-7f02f22d8000 ---p 00000000 00:00 0 
+7f02f22d8000-7f02f2358000 rw-p 00000000 00:00 0 
+7f02f2358000-7f02f235b000 ---p 00000000 00:00 0 
+7f02f235b000-7f02f2ba9000 rw-p 00000000 00:00 0 
+7f0302baa000-7f0302bb0000 r-xp 00000000 08:01 8531022                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/IOUGens.so
+7f0302bb0000-7f0302db0000 ---p 00006000 08:01 8531022                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/IOUGens.so
+7f0302db0000-7f0302db1000 r--p 00006000 08:01 8531022                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/IOUGens.so
+7f0302db1000-7f0302db2000 rw-p 00007000 08:01 8531022                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/IOUGens.so
+7f0302db2000-7f0302dc5000 r-xp 00000000 08:01 8530561                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshPVUGens.so
+7f0302dc5000-7f0302fc4000 ---p 00013000 08:01 8530561                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshPVUGens.so
+7f0302fc4000-7f0302fc5000 r--p 00012000 08:01 8530561                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshPVUGens.so
+7f0302fc5000-7f0302fc6000 rw-p 00013000 08:01 8530561                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshPVUGens.so
+7f0302fc6000-7f0302fd2000 rw-p 00000000 00:00 0 
+7f0302fd2000-7f0302fd4000 r-xp 00000000 08:01 8530573                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDPollUGens.so
+7f0302fd4000-7f03031d3000 ---p 00002000 08:01 8530573                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDPollUGens.so
+7f03031d3000-7f03031d4000 r--p 00001000 08:01 8530573                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDPollUGens.so
+7f03031d4000-7f03031d5000 rw-p 00002000 08:01 8530573                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDPollUGens.so
+7f03031d5000-7f03031d8000 r-xp 00000000 08:01 8530850                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DynNoiseUGens.so
+7f03031d8000-7f03033d7000 ---p 00003000 08:01 8530850                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DynNoiseUGens.so
+7f03033d7000-7f03033d8000 r--p 00002000 08:01 8530850                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DynNoiseUGens.so
+7f03033d8000-7f03033d9000 rw-p 00003000 08:01 8530850                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DynNoiseUGens.so
+7f03033d9000-7f03033dd000 r-xp 00000000 08:01 8530546                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatUGens.so
+7f03033dd000-7f03035dc000 ---p 00004000 08:01 8530546                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatUGens.so
+7f03035dc000-7f03035dd000 r--p 00003000 08:01 8530546                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatUGens.so
+7f03035dd000-7f03035de000 rw-p 00004000 08:01 8530546                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatUGens.so
+7f03035de000-7f0303618000 r-xp 00000000 08:01 8530560                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshGrainUGens.so
+7f0303618000-7f0303817000 ---p 0003a000 08:01 8530560                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshGrainUGens.so
+7f0303817000-7f0303818000 r--p 00039000 08:01 8530560                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshGrainUGens.so
+7f0303818000-7f0303819000 rw-p 0003a000 08:01 8530560                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshGrainUGens.so
+7f0303819000-7f030381a000 ---p 00000000 00:00 0 
+7f030381a000-7f030406a000 rw-p 00000000 00:00 0                          [stack:14269]
+7f030406a000-7f030406d000 r-xp 00000000 08:01 8530849                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DiskIO_UGens.so
+7f030406d000-7f030426d000 ---p 00003000 08:01 8530849                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DiskIO_UGens.so
+7f030426d000-7f030426e000 r--p 00003000 08:01 8530849                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DiskIO_UGens.so
+7f030426e000-7f030426f000 rw-p 00004000 08:01 8530849                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DiskIO_UGens.so
+7f030426f000-7f0304270000 rw-p 00000000 00:00 0 
+7f0304270000-7f0304273000 r-xp 00000000 08:01 8530585                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SummerUGens.so
+7f0304273000-7f0304473000 ---p 00003000 08:01 8530585                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SummerUGens.so
+7f0304473000-7f0304474000 r--p 00003000 08:01 8530585                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SummerUGens.so
+7f0304474000-7f0304475000 rw-p 00004000 08:01 8530585                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SummerUGens.so
+7f0304475000-7f030448b000 r-xp 00000000 08:01 8530552                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFilt.so
+7f030448b000-7f030468a000 ---p 00016000 08:01 8530552                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFilt.so
+7f030468a000-7f030468b000 r--p 00015000 08:01 8530552                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFilt.so
+7f030468b000-7f030468c000 rw-p 00016000 08:01 8530552                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFilt.so
+7f030468c000-7f030468f000 r-xp 00000000 08:01 8531019                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GendynUGens.so
+7f030468f000-7f030488e000 ---p 00003000 08:01 8531019                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GendynUGens.so
+7f030488e000-7f030488f000 r--p 00002000 08:01 8531019                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GendynUGens.so
+7f030488f000-7f0304890000 rw-p 00003000 08:01 8531019                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GendynUGens.so
+7f0304890000-7f0304892000 r-xp 00000000 08:01 8530576                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f0304892000-7f0304a91000 ---p 00002000 08:01 8530576                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f0304a91000-7f0304a92000 r--p 00001000 08:01 8530576                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f0304a92000-7f0304a93000 rw-p 00002000 08:01 8530576                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f0304a93000-7f0304a98000 r-xp 00000000 08:01 8530553                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobGrain.so
+7f0304a98000-7f0304c98000 ---p 00005000 08:01 8530553                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobGrain.so
+7f0304c98000-7f0304c99000 r--p 00005000 08:01 8530553                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobGrain.so
+7f0304c99000-7f0304c9a000 rw-p 00006000 08:01 8530553                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobGrain.so
+7f0304c9a000-7f0304c9e000 r-xp 00000000 08:01 8530544                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AY_UGen.so
+7f0304c9e000-7f0304e9d000 ---p 00004000 08:01 8530544                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AY_UGen.so
+7f0304e9d000-7f0304e9e000 r--p 00003000 08:01 8530544                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AY_UGen.so
+7f0304e9e000-7f0304e9f000 rw-p 00004000 08:01 8530544                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AY_UGen.so
+7f0304e9f000-7f0304ea1000 rw-p 00000000 00:00 0 
+7f0304ea1000-7f0304eb9000 r-xp 00000000 08:01 8531021                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GrainUGens.so
+7f0304eb9000-7f03050b8000 ---p 00018000 08:01 8531021                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GrainUGens.so
+7f03050b8000-7f03050b9000 r--p 00017000 08:01 8531021                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GrainUGens.so
+7f03050b9000-7f03050ba000 rw-p 00018000 08:01 8531021                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GrainUGens.so
+7f03050ba000-7f03050cb000 r-xp 00000000 08:01 8531111                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/OscUGens.so
+7f03050cb000-7f03052ca000 ---p 00011000 08:01 8531111                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/OscUGens.so
+7f03052ca000-7f03052cb000 r--p 00010000 08:01 8531111                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/OscUGens.so
+7f03052cb000-7f03052cc000 rw-p 00011000 08:01 8531111                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/OscUGens.so
+7f03052cc000-7f03052d0000 r-xp 00000000 08:01 8530542                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AmbisonicUGens.so
+7f03052d0000-7f03054d0000 ---p 00004000 08:01 8530542                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AmbisonicUGens.so
+7f03054d0000-7f03054d1000 r--p 00004000 08:01 8530542                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AmbisonicUGens.so
+7f03054d1000-7f03054d2000 rw-p 00005000 08:01 8530542                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AmbisonicUGens.so
+7f03054d2000-7f03054da000 r-xp 00000000 08:01 8530582                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RMEQSuite.so
+7f03054da000-7f03056d9000 ---p 00008000 08:01 8530582                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RMEQSuite.so
+7f03056d9000-7f03056da000 r--p 00007000 08:01 8530582                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RMEQSuite.so
+7f03056da000-7f03056db000 rw-p 00008000 08:01 8530582                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RMEQSuite.so
+7f03056db000-7f03056dd000 r-xp 00000000 08:01 8531148                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TestUGens.so
+7f03056dd000-7f03058dc000 ---p 00002000 08:01 8531148                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TestUGens.so
+7f03058dc000-7f03058dd000 r--p 00001000 08:01 8531148                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TestUGens.so
+7f03058dd000-7f03058de000 rw-p 00002000 08:01 8531148                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TestUGens.so
+7f03058de000-7f03058e4000 r-xp 00000000 08:01 8531110                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NoiseUGens.so
+7f03058e4000-7f0305ae3000 ---p 00006000 08:01 8531110                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NoiseUGens.so
+7f0305ae3000-7f0305ae4000 r--p 00005000 08:01 8531110                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NoiseUGens.so
+7f0305ae4000-7f0305ae5000 rw-p 00006000 08:01 8531110                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NoiseUGens.so
+7f0305ae5000-7f0305aeb000 r-xp 00000000 08:01 8530547                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BBCut2UGens.so
+7f0305aeb000-7f0305cea000 ---p 00006000 08:01 8530547                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BBCut2UGens.so
+7f0305cea000-7f0305ceb000 r--p 00005000 08:01 8530547                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BBCut2UGens.so
+7f0305ceb000-7f0305ced000 rw-p 00006000 08:01 8530547                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BBCut2UGens.so
+7f0305ced000-7f0305cf4000 r-xp 00000000 08:01 8530549                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BetablockerUGens.so
+7f0305cf4000-7f0305ef3000 ---p 00007000 08:01 8530549                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BetablockerUGens.so
+7f0305ef3000-7f0305ef4000 r--p 00006000 08:01 8530549                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BetablockerUGens.so
+7f0305ef4000-7f0305ef5000 rw-p 00007000 08:01 8530549                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BetablockerUGens.so
+7f0305ef5000-7f0305ef9000 r-xp 00000000 08:01 8530586                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TagSystemUgens.so
+7f0305ef9000-7f03060f8000 ---p 00004000 08:01 8530586                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TagSystemUgens.so
+7f03060f8000-7f03060f9000 r--p 00003000 08:01 8530586                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TagSystemUgens.so
+7f03060f9000-7f03060fa000 rw-p 00004000 08:01 8530586                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TagSystemUgens.so
+7f03060fa000-7f03061bc000 r-xp 00000000 08:01 8530584                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/StkUGens.so
+7f03061bc000-7f03063bb000 ---p 000c2000 08:01 8530584                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/StkUGens.so
+7f03063bb000-7f03063bf000 r--p 000c1000 08:01 8530584                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/StkUGens.so
+7f03063bf000-7f03063c4000 rw-p 000c5000 08:01 8530584                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/StkUGens.so
+7f03063c4000-7f03063d4000 r-xp 00000000 08:01 8530559                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshAmbiUGens.so
+7f03063d4000-7f03065d3000 ---p 00010000 08:01 8530559                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshAmbiUGens.so
+7f03065d3000-7f03065d4000 r--p 0000f000 08:01 8530559                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshAmbiUGens.so
+7f03065d4000-7f03065d5000 rw-p 00010000 08:01 8530559                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshAmbiUGens.so
+7f03065d5000-7f03065da000 r-xp 00000000 08:01 8530567                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDChaosUGens.so
+7f03065da000-7f03067d9000 ---p 00005000 08:01 8530567                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDChaosUGens.so
+7f03067d9000-7f03067da000 r--p 00004000 08:01 8530567                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDChaosUGens.so
+7f03067da000-7f03067db000 rw-p 00005000 08:01 8530567                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDChaosUGens.so
+7f03067db000-7f03067dd000 r-xp 00000000 08:01 8531151                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnpackFFTUGens.so
+7f03067dd000-7f03069dc000 ---p 00002000 08:01 8531151                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnpackFFTUGens.so
+7f03069dc000-7f03069dd000 r--p 00001000 08:01 8531151                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnpackFFTUGens.so
+7f03069dd000-7f03069de000 rw-p 00002000 08:01 8531151                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnpackFFTUGens.so
+7f03069de000-7f03069ea000 rw-p 00000000 00:00 0 
+7f03069ea000-7f03069f2000 r-xp 00000000 08:01 8531112                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PanUGens.so
+7f03069f2000-7f0306bf1000 ---p 00008000 08:01 8531112                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PanUGens.so
+7f0306bf1000-7f0306bf2000 r--p 00007000 08:01 8531112                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PanUGens.so
+7f0306bf2000-7f0306bf3000 rw-p 00008000 08:01 8531112                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PanUGens.so
+7f0306bf3000-7f0306bf6000 r-xp 00000000 08:01 8530575                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTreeUGens.so
+7f0306bf6000-7f0306df5000 ---p 00003000 08:01 8530575                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTreeUGens.so
+7f0306df5000-7f0306df6000 r--p 00002000 08:01 8530575                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTreeUGens.so
+7f0306df6000-7f0306df7000 rw-p 00003000 08:01 8530575                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDTreeUGens.so
+7f0306df7000-7f0306df9000 r-xp 00000000 08:01 8530563                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LadspaUGen.so
+7f0306df9000-7f0306ff9000 ---p 00002000 08:01 8530563                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LadspaUGen.so
+7f0306ff9000-7f0306ffa000 r--p 00002000 08:01 8530563                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LadspaUGen.so
+7f0306ffa000-7f0306ffb000 rw-p 00003000 08:01 8530563                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LadspaUGen.so
+7f0306ffb000-7f0307002000 r-xp 00000000 08:01 8530846                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ChaosUGens.so
+7f0307002000-7f0307201000 ---p 00007000 08:01 8530846                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ChaosUGens.so
+7f0307201000-7f0307202000 r--p 00006000 08:01 8530846                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ChaosUGens.so
+7f0307202000-7f0307203000 rw-p 00007000 08:01 8530846                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ChaosUGens.so
+7f0307203000-7f030720f000 r-xp 00000000 08:01 8530848                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DemandUGens.so
+7f030720f000-7f030740f000 ---p 0000c000 08:01 8530848                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DemandUGens.so
+7f030740f000-7f0307410000 r--p 0000c000 08:01 8530848                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DemandUGens.so
+7f0307410000-7f0307411000 rw-p 0000d000 08:01 8530848                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DemandUGens.so
+7f0307411000-7f0307413000 r-xp 00000000 08:01 8531113                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f0307413000-7f0307612000 ---p 00002000 08:01 8531113                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f0307612000-7f0307613000 r--p 00001000 08:01 8531113                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f0307613000-7f0307614000 rw-p 00002000 08:01 8531113                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f0307614000-7f0307622000 r-xp 00000000 08:01 8530583                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SLUGens.so
+7f0307622000-7f0307821000 ---p 0000e000 08:01 8530583                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SLUGens.so
+7f0307821000-7f0307822000 r--p 0000d000 08:01 8530583                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SLUGens.so
+7f0307822000-7f0307823000 rw-p 0000e000 08:01 8530583                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/SLUGens.so
+7f0307823000-7f030782f000 r-xp 00000000 08:01 8531012                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FFT_UGens.so
+7f030782f000-7f0307a2f000 ---p 0000c000 08:01 8531012                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FFT_UGens.so
+7f0307a2f000-7f0307a30000 r--p 0000c000 08:01 8531012                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FFT_UGens.so
+7f0307a30000-7f0307a31000 rw-p 0000d000 08:01 8531012                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FFT_UGens.so
+7f0307a31000-7f0307a61000 rw-p 00000000 00:00 0 
+7f0307a61000-7f0307a69000 r-xp 00000000 08:01 8530587                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TJUGens.so
+7f0307a69000-7f0307c68000 ---p 00008000 08:01 8530587                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TJUGens.so
+7f0307c68000-7f0307c69000 r--p 00007000 08:01 8530587                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TJUGens.so
+7f0307c69000-7f0307c6a000 rw-p 00008000 08:01 8530587                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TJUGens.so
+7f0307c6a000-7f0307c77000 r-xp 00000000 08:01 8530579                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NCAnalysisUGens.so
+7f0307c77000-7f0307e76000 ---p 0000d000 08:01 8530579                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NCAnalysisUGens.so
+7f0307e76000-7f0307e77000 r--p 0000c000 08:01 8530579                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NCAnalysisUGens.so
+7f0307e77000-7f0307e78000 rw-p 0000d000 08:01 8530579                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/NCAnalysisUGens.so
+7f0307e78000-7f0307ec3000 rw-p 00000000 00:00 0 
+7f0307ec3000-7f0307ec5000 r-xp 00000000 08:01 8530572                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDOscUGens.so
+7f0307ec5000-7f03080c4000 ---p 00002000 08:01 8530572                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDOscUGens.so
+7f03080c4000-7f03080c5000 r--p 00001000 08:01 8530572                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDOscUGens.so
+7f03080c5000-7f03080c6000 rw-p 00002000 08:01 8530572                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDOscUGens.so
+7f03080c6000-7f03080e4000 r-xp 00000000 08:01 8530562                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshUGens.so
+7f03080e4000-7f03082e4000 ---p 0001e000 08:01 8530562                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshUGens.so
+7f03082e4000-7f03082e5000 r--p 0001e000 08:01 8530562                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshUGens.so
+7f03082e5000-7f03082e6000 rw-p 0001f000 08:01 8530562                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/JoshUGens.so
+7f03082e6000-7f03082ec000 r-xp 00000000 08:01 8530554                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobNoise.so
+7f03082ec000-7f03084eb000 ---p 00006000 08:01 8530554                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobNoise.so
+7f03084eb000-7f03084ec000 r--p 00005000 08:01 8530554                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobNoise.so
+7f03084ec000-7f03084ed000 rw-p 00006000 08:01 8530554                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobNoise.so
+7f03084ed000-7f03084ef000 r-xp 00000000 08:01 8530581                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RFWUGens.so
+7f03084ef000-7f03086ee000 ---p 00002000 08:01 8530581                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RFWUGens.so
+7f03086ee000-7f03086ef000 r--p 00001000 08:01 8530581                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RFWUGens.so
+7f03086ef000-7f03086f0000 rw-p 00002000 08:01 8530581                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/RFWUGens.so
+7f03086f0000-7f030871e000 r-xp 00000000 08:01 8530847                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DelayUGens.so
+7f030871e000-7f030891e000 ---p 0002e000 08:01 8530847                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DelayUGens.so
+7f030891e000-7f030891f000 r--p 0002e000 08:01 8530847                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DelayUGens.so
+7f030891f000-7f0308920000 rw-p 0002f000 08:01 8530847                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DelayUGens.so
+7f0308920000-7f0308932000 r-xp 00000000 08:01 8531026                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LFUGens.so
+7f0308932000-7f0308b32000 ---p 00012000 08:01 8531026                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LFUGens.so
+7f0308b32000-7f0308b33000 r--p 00012000 08:01 8531026                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LFUGens.so
+7f0308b33000-7f0308b34000 rw-p 00013000 08:01 8531026                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LFUGens.so
+7f0308b34000-7f0308b38000 r-xp 00000000 08:01 8530565                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDBufferUGens.so
+7f0308b38000-7f0308d37000 ---p 00004000 08:01 8530565                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDBufferUGens.so
+7f0308d37000-7f0308d38000 r--p 00003000 08:01 8530565                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDBufferUGens.so
+7f0308d38000-7f0308d39000 rw-p 00004000 08:01 8530565                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDBufferUGens.so
+7f0308d39000-7f0308d3b000 r-xp 00000000 08:01 8530545                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatPVUgens.so
+7f0308d3b000-7f0308f3a000 ---p 00002000 08:01 8530545                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatPVUgens.so
+7f0308f3a000-7f0308f3b000 r--p 00001000 08:01 8530545                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatPVUgens.so
+7f0308f3b000-7f0308f3c000 rw-p 00002000 08:01 8530545                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BatPVUgens.so
+7f0308f3c000-7f0308f48000 rw-p 00000000 00:00 0 
+7f0308f48000-7f0308f4c000 r-xp 00000000 08:01 8530574                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDSOMUGens.so
+7f0308f4c000-7f030914b000 ---p 00004000 08:01 8530574                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDSOMUGens.so
+7f030914b000-7f030914c000 r--p 00003000 08:01 8530574                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDSOMUGens.so
+7f030914c000-7f030914d000 rw-p 00004000 08:01 8530574                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDSOMUGens.so
+7f030914d000-7f030914e000 ---p 00000000 00:00 0 
+7f030914e000-7f030999e000 rw-p 00000000 00:00 0                          [stack:14268]
+7f030999e000-7f03099a1000 r-xp 00000000 08:01 8531107                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MouseUGens.so
+7f03099a1000-7f0309ba0000 ---p 00003000 08:01 8531107                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MouseUGens.so
+7f0309ba0000-7f0309ba1000 r--p 00002000 08:01 8531107                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MouseUGens.so
+7f0309ba1000-7f0309ba2000 rw-p 00003000 08:01 8531107                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MouseUGens.so
+7f0309ba2000-7f0309ba8000 r-xp 00000000 08:01 8531115                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PV_ThirdParty.so
+7f0309ba8000-7f0309da8000 ---p 00006000 08:01 8531115                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PV_ThirdParty.so
+7f0309da8000-7f0309da9000 r--p 00006000 08:01 8531115                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PV_ThirdParty.so
+7f0309da9000-7f0309daa000 rw-p 00007000 08:01 8531115                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PV_ThirdParty.so
+7f0309daa000-7f0309dda000 rw-p 00000000 00:00 0 
+7f0309dda000-7f0309de0000 r-xp 00000000 08:01 8531109                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MulAddUGens.so
+7f0309de0000-7f0309fdf000 ---p 00006000 08:01 8531109                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MulAddUGens.so
+7f0309fdf000-7f0309fe0000 r--p 00005000 08:01 8531109                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MulAddUGens.so
+7f0309fe0000-7f0309fe1000 rw-p 00006000 08:01 8531109                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MulAddUGens.so
+7f0309fe1000-7f0309feb000 r-xp 00000000 08:01 8531028                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ML_UGens.so
+7f0309feb000-7f030a1ea000 ---p 0000a000 08:01 8531028                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ML_UGens.so
+7f030a1ea000-7f030a1eb000 r--p 00009000 08:01 8531028                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ML_UGens.so
+7f030a1eb000-7f030a1f3000 rw-p 0000a000 08:01 8531028                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ML_UGens.so
+7f030a1f3000-7f030a22f000 rw-p 00000000 00:00 0 
+7f030a22f000-7f030a232000 r-xp 00000000 08:01 8530555                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BlackrainUGens.so
+7f030a232000-7f030a432000 ---p 00003000 08:01 8530555                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BlackrainUGens.so
+7f030a432000-7f030a433000 r--p 00003000 08:01 8530555                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BlackrainUGens.so
+7f030a433000-7f030a434000 rw-p 00004000 08:01 8530555                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BlackrainUGens.so
+7f030a434000-7f030a446000 r-xp 00000000 08:01 8530548                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BerlachUGens.so
+7f030a446000-7f030a645000 ---p 00012000 08:01 8530548                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BerlachUGens.so
+7f030a645000-7f030a646000 r--p 00011000 08:01 8530548                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BerlachUGens.so
+7f030a646000-7f030a647000 rw-p 00012000 08:01 8530548                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BerlachUGens.so
+7f030a647000-7f030a64f000 r-xp 00000000 08:01 8530588                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VBAP.so
+7f030a64f000-7f030a84e000 ---p 00008000 08:01 8530588                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VBAP.so
+7f030a84e000-7f030a84f000 r--p 00007000 08:01 8530588                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VBAP.so
+7f030a84f000-7f030a850000 rw-p 00008000 08:01 8530588                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VBAP.so
+7f030a850000-7f030a882000 r-xp 00000000 08:01 8530845                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BinaryOpUGens.so
+7f030a882000-7f030aa82000 ---p 00032000 08:01 8530845                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BinaryOpUGens.so
+7f030aa82000-7f030aa83000 r--p 00032000 08:01 8530845                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BinaryOpUGens.so
+7f030aa83000-7f030aa84000 rw-p 00033000 08:01 8530845                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BinaryOpUGens.so
+7f030aa84000-7f030aa87000 r-xp 00000000 08:01 8530564                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LoopBuf.so
+7f030aa87000-7f030ac86000 ---p 00003000 08:01 8530564                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LoopBuf.so
+7f030ac86000-7f030ac87000 r--p 00002000 08:01 8530564                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LoopBuf.so
+7f030ac87000-7f030ac88000 rw-p 00003000 08:01 8530564                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/LoopBuf.so
+7f030ac88000-7f030ac8a000 r-xp 00000000 08:01 8530571                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f030ac8a000-7f030ae89000 ---p 00002000 08:01 8530571                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f030ae89000-7f030ae8a000 r--p 00001000 08:01 8530571                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f030ae8a000-7f030ae8b000 rw-p 00002000 08:01 8530571                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f030ae8b000-7f030aea6000 r-xp 00000000 08:01 8530543                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AtkUGens.so
+7f030aea6000-7f030b0a6000 ---p 0001b000 08:01 8530543                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AtkUGens.so
+7f030b0a6000-7f030b0a7000 r--p 0001b000 08:01 8530543                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AtkUGens.so
+7f030b0a7000-7f030b0a8000 rw-p 0001c000 08:01 8530543                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/AtkUGens.so
+7f030b0a8000-7f030b0ab000 r-xp 00000000 08:01 8530577                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MdaUGens.so
+7f030b0ab000-7f030b2aa000 ---p 00003000 08:01 8530577                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MdaUGens.so
+7f030b2aa000-7f030b2ab000 r--p 00002000 08:01 8530577                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MdaUGens.so
+7f030b2ab000-7f030b3ca000 rw-p 00003000 08:01 8530577                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MdaUGens.so
+7f030b3ca000-7f030b3d5000 r-xp 00000000 08:01 8530550                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobChaos.so
+7f030b3d5000-7f030b5d4000 ---p 0000b000 08:01 8530550                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobChaos.so
+7f030b5d4000-7f030b5d5000 r--p 0000a000 08:01 8530550                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobChaos.so
+7f030b5d5000-7f030b5d6000 rw-p 0000b000 08:01 8530550                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobChaos.so
+7f030b5d6000-7f030b5d9000 r-xp 00000000 08:01 8530589                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VOSIM.so
+7f030b5d9000-7f030b7d8000 ---p 00003000 08:01 8530589                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VOSIM.so
+7f030b7d8000-7f030b7d9000 r--p 00002000 08:01 8530589                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VOSIM.so
+7f030b7d9000-7f030b7da000 rw-p 00003000 08:01 8530589                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/VOSIM.so
+7f030b7da000-7f030b7e0000 r-xp 00000000 08:01 8531147                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ReverbUGens.so
+7f030b7e0000-7f030b9df000 ---p 00006000 08:01 8531147                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ReverbUGens.so
+7f030b9df000-7f030b9e0000 r--p 00005000 08:01 8531147                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ReverbUGens.so
+7f030b9e0000-7f030b9e1000 rw-p 00006000 08:01 8531147                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/ReverbUGens.so
+7f030b9e1000-7f030b9e4000 r-xp 00000000 08:01 8530570                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFilterUGens.so
+7f030b9e4000-7f030bbe3000 ---p 00003000 08:01 8530570                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFilterUGens.so
+7f030bbe3000-7f030bbe4000 r--p 00002000 08:01 8530570                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFilterUGens.so
+7f030bbe4000-7f030bbe5000 rw-p 00003000 08:01 8530570                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFilterUGens.so
+7f030bbe5000-7f030bbf8000 r-xp 00000000 08:01 8531150                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnaryOpUGens.so
+7f030bbf8000-7f030bdf8000 ---p 00013000 08:01 8531150                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnaryOpUGens.so
+7f030bdf8000-7f030bdf9000 r--p 00013000 08:01 8531150                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnaryOpUGens.so
+7f030bdf9000-7f030bdfa000 rw-p 00014000 08:01 8531150                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/UnaryOpUGens.so
+7f030bdfa000-7f030bdff000 r-xp 00000000 08:01 8530556                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/Concat.so
+7f030bdff000-7f030bffe000 ---p 00005000 08:01 8530556                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/Concat.so
+7f030bffe000-7f030bfff000 r--p 00004000 08:01 8530556                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/Concat.so
+7f030bfff000-7f030c000000 rw-p 00005000 08:01 8530556                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/Concat.so
+7f030c000000-7f030c021000 rw-p 00000000 00:00 0 
+7f030c021000-7f0310000000 ---p 00000000 00:00 0 
+7f0310000000-7f0310034000 rw-p 00000000 00:00 0 
+7f0310034000-7f0314000000 ---p 00000000 00:00 0 
+7f0314000000-7f0314021000 rw-p 00000000 00:00 0 
+7f0314021000-7f0318000000 ---p 00000000 00:00 0 
+7f0318000000-7f0318103000 rw-p 00000000 00:00 0 
+7f0318103000-7f031c000000 ---p 00000000 00:00 0 
+7f031c000000-7f031c021000 rw-p 00000000 00:00 0 
+7f031c021000-7f0320000000 ---p 00000000 00:00 0 
+7f0320000000-7f0320021000 rw-p 00000000 00:00 0 
+7f0320021000-7f0324000000 ---p 00000000 00:00 0 
+7f032403e000-7f0324041000 r-xp 00000000 08:01 8530578                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MembraneUGens.so
+7f0324041000-7f0324240000 ---p 00003000 08:01 8530578                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MembraneUGens.so
+7f0324240000-7f0324241000 r--p 00002000 08:01 8530578                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MembraneUGens.so
+7f0324241000-7f0324242000 rw-p 00003000 08:01 8530578                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MembraneUGens.so
+7f0324242000-7f032425e000 r-xp 00000000 08:01 8531018                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FilterUGens.so
+7f032425e000-7f032445d000 ---p 0001c000 08:01 8531018                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FilterUGens.so
+7f032445d000-7f032445e000 r--p 0001b000 08:01 8531018                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FilterUGens.so
+7f032445e000-7f032445f000 rw-p 0001c000 08:01 8531018                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/FilterUGens.so
+7f032445f000-7f0324462000 r-xp 00000000 08:01 8530566                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f0324462000-7f0324661000 ---p 00003000 08:01 8530566                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f0324661000-7f0324662000 r--p 00002000 08:01 8530566                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f0324662000-7f0324663000 rw-p 00003000 08:01 8530566                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f0324663000-7f032466f000 rw-p 00000000 00:00 0 
+7f032466f000-7f032467b000 r-xp 00000000 08:01 8530580                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PitchDetection.so
+7f032467b000-7f032487a000 ---p 0000c000 08:01 8530580                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PitchDetection.so
+7f032487a000-7f032487b000 r--p 0000b000 08:01 8530580                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PitchDetection.so
+7f032487b000-7f032487c000 rw-p 0000c000 08:01 8530580                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/PitchDetection.so
+7f032487c000-7f032487d000 ---p 00000000 00:00 0 
+7f032487d000-7f03250cd000 rw-p 00000000 00:00 0                          [stack:14267]
+7f03250cd000-7f03250ce000 r-xp 00000000 08:01 8531024                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/KeyboardUGens.so
+7f03250ce000-7f03252ce000 ---p 00001000 08:01 8531024                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/KeyboardUGens.so
+7f03252ce000-7f03252cf000 r--p 00001000 08:01 8531024                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/KeyboardUGens.so
+7f03252cf000-7f03252d0000 rw-p 00002000 08:01 8531024                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/KeyboardUGens.so
+7f03252d0000-7f03252d3000 r-xp 00000000 08:01 8530558                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GlitchUGens.so
+7f03252d3000-7f03254d2000 ---p 00003000 08:01 8530558                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GlitchUGens.so
+7f03254d2000-7f03254d3000 r--p 00002000 08:01 8530558                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GlitchUGens.so
+7f03254d3000-7f03254d4000 rw-p 00003000 08:01 8530558                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/GlitchUGens.so
+7f03254d4000-7f03254e0000 r-xp 00000000 08:01 8531149                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TriggerUGens.so
+7f03254e0000-7f03256df000 ---p 0000c000 08:01 8531149                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TriggerUGens.so
+7f03256df000-7f03256e0000 r--p 0000b000 08:01 8531149                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TriggerUGens.so
+7f03256e0000-7f03256e1000 rw-p 0000c000 08:01 8531149                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/TriggerUGens.so
+7f03256e1000-7f03256eb000 r-xp 00000000 08:01 8530569                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFFTUGens.so
+7f03256eb000-7f03258ea000 ---p 0000a000 08:01 8530569                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFFTUGens.so
+7f03258ea000-7f03258eb000 r--p 00009000 08:01 8530569                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFFTUGens.so
+7f03258eb000-7f03258ec000 rw-p 0000a000 08:01 8530569                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDFFTUGens.so
+7f03258ec000-7f03258f8000 rw-p 00000000 00:00 0 
+7f03258f8000-7f03258fa000 r-xp 00000000 08:01 8530568                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f03258fa000-7f0325af9000 ---p 00002000 08:01 8530568                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f0325af9000-7f0325afa000 r--p 00001000 08:01 8530568                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f0325afa000-7f0325afb000 rw-p 00002000 08:01 8530568                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f0325afb000-7f0325afe000 r-xp 00000000 08:01 8530557                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DistortionUGens.so
+7f0325afe000-7f0325cfd000 ---p 00003000 08:01 8530557                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DistortionUGens.so
+7f0325cfd000-7f0325cfe000 r--p 00002000 08:01 8530557                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DistortionUGens.so
+7f0325cfe000-7f0325cff000 rw-p 00003000 08:01 8530557                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/DistortionUGens.so
+7f0325cff000-7f0325d04000 r-xp 00000000 08:01 8530551                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFFT.so
+7f0325d04000-7f0325f03000 ---p 00005000 08:01 8530551                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFFT.so
+7f0325f03000-7f0325f04000 r--p 00004000 08:01 8530551                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFFT.so
+7f0325f04000-7f0325f05000 rw-p 00005000 08:01 8530551                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/BhobFFT.so
+7f0325f05000-7f0325f11000 rw-p 00000000 00:00 0 
+7f0325f11000-7f0325f29000 r-xp 00000000 08:01 12073012                   /lib/x86_64-linux-gnu/libresolv-2.15.so
+7f0325f29000-7f0326129000 ---p 00018000 08:01 12073012                   /lib/x86_64-linux-gnu/libresolv-2.15.so
+7f0326129000-7f032612a000 r--p 00018000 08:01 12073012                   /lib/x86_64-linux-gnu/libresolv-2.15.so
+7f032612a000-7f032612b000 rw-p 00019000 08:01 12073012                   /lib/x86_64-linux-gnu/libresolv-2.15.so
+7f032612b000-7f032612d000 rw-p 00000000 00:00 0 
+7f032612d000-7f0326132000 r-xp 00000000 08:01 792826                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f0326132000-7f0326331000 ---p 00005000 08:01 792826                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f0326331000-7f0326332000 r--p 00004000 08:01 792826                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f0326332000-7f0326333000 rw-p 00005000 08:01 792826                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f0326333000-7f032633b000 r-xp 00000000 08:01 12062308                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f032633b000-7f032653a000 ---p 00008000 08:01 12062308                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f032653a000-7f032653b000 r--p 00007000 08:01 12062308                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f032653b000-7f032653c000 rw-p 00008000 08:01 12062308                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f032653c000-7f0326598000 r-xp 00000000 08:01 786460                     /usr/lib/x86_64-linux-gnu/libpulsecommon-1.1.so
+7f0326598000-7f0326798000 ---p 0005c000 08:01 786460                     /usr/lib/x86_64-linux-gnu/libpulsecommon-1.1.so
+7f0326798000-7f0326799000 r--p 0005c000 08:01 786460                     /usr/lib/x86_64-linux-gnu/libpulsecommon-1.1.so
+7f0326799000-7f032679a000 rw-p 0005d000 08:01 786460                     /usr/lib/x86_64-linux-gnu/libpulsecommon-1.1.so
+7f032679a000-7f03267a1000 r-xp 00000000 08:01 793088                     /usr/lib/x86_64-linux-gnu/libjson.so.0.0.1
+7f03267a1000-7f03269a0000 ---p 00007000 08:01 793088                     /usr/lib/x86_64-linux-gnu/libjson.so.0.0.1
+7f03269a0000-7f03269a1000 r--p 00006000 08:01 793088                     /usr/lib/x86_64-linux-gnu/libjson.so.0.0.1
+7f03269a1000-7f03269a2000 rw-p 00007000 08:01 793088                     /usr/lib/x86_64-linux-gnu/libjson.so.0.0.1
+7f03269a2000-7f03269e8000 r-xp 00000000 08:01 786522                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.13.5
+7f03269e8000-7f0326be8000 ---p 00046000 08:01 786522                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.13.5
+7f0326be8000-7f0326be9000 r--p 00046000 08:01 786522                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.13.5
+7f0326be9000-7f0326bea000 rw-p 00047000 08:01 786522                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.13.5
+7f0326bea000-7f0326bed000 ---p 00000000 00:00 0 
+7f0326bed000-7f0326ceb000 rw-p 00000000 00:00 0                          [stack:15130]
+7f0326ceb000-7f0326cee000 ---p 00000000 00:00 0 
+7f0326cee000-7f0326dec000 rw-p 00000000 00:00 0                          [stack:14265]
+7f0326dec000-7f0326ed2000 r-xp 00000000 08:01 786888                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f0326ed2000-7f03270d2000 ---p 000e6000 08:01 786888                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f03270d2000-7f03270d8000 r--p 000e6000 08:01 786888                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f03270d8000-7f03270d9000 rw-p 000ec000 08:01 786888                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f03270d9000-7f03270e8000 r-xp 00000000 08:01 3811571                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjsoundalsa.so
+7f03270e8000-7f03272e7000 ---p 0000f000 08:01 3811571                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjsoundalsa.so
+7f03272e7000-7f03272e8000 rw-p 0000e000 08:01 3811571                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjsoundalsa.so
+7f03272e8000-7f03272e9000 r-xp 00000000 08:01 3811546                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjsound.so
+7f03272e9000-7f03274e8000 ---p 00001000 08:01 3811546                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjsound.so
+7f03274e8000-7f03274e9000 rw-p 00000000 08:01 3811546                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjsound.so
+7f03274e9000-7f03274ec000 ---p 00000000 00:00 0 
+7f03274ec000-7f03275ea000 rw-p 00000000 00:00 0 
+7f03275ea000-7f03275ef000 r-xp 00000000 08:01 792779                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f03275ef000-7f03277ee000 ---p 00005000 08:01 792779                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f03277ee000-7f03277ef000 r--p 00004000 08:01 792779                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f03277ef000-7f03277f0000 rw-p 00005000 08:01 792779                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f03277f0000-7f03277f9000 r-xp 00000000 08:01 792771                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f03277f9000-7f03279f8000 ---p 00009000 08:01 792771                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f03279f8000-7f03279f9000 r--p 00008000 08:01 792771                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f03279f9000-7f03279fa000 rw-p 00009000 08:01 792771                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f03279fa000-7f03279fd000 ---p 00000000 00:00 0 
+7f03279fd000-7f0327afb000 rw-p 00000000 00:00 0                          [stack:13974]
+7f0327afb000-7f0327afe000 ---p 00000000 00:00 0 
+7f0327afe000-7f0327bfc000 rw-p 00000000 00:00 0                          [stack:13973]
+7f0327bfc000-7f0327bff000 ---p 00000000 00:00 0 
+7f0327bff000-7f0327cfd000 rw-p 00000000 00:00 0                          [stack:13972]
+7f0327cfd000-7f0327d00000 ---p 00000000 00:00 0 
+7f0327d00000-7f0327dfe000 rw-p 00000000 00:00 0                          [stack:13971]
+7f0327dfe000-7f0327e01000 ---p 00000000 00:00 0 
+7f0327e01000-7f0327eff000 rw-p 00000000 00:00 0                          [stack:13970]
+7f0327eff000-7f0327f02000 ---p 00000000 00:00 0 
+7f0327f02000-7f0328000000 rw-p 00000000 00:00 0                          [stack:13969]
+7f0328000000-7f0328021000 rw-p 00000000 00:00 0 
+7f0328021000-7f032c000000 ---p 00000000 00:00 0 
+7f032c000000-7f032c021000 rw-p 00000000 00:00 0 
+7f032c021000-7f0330000000 ---p 00000000 00:00 0 
+7f0330000000-7f0330021000 rw-p 00000000 00:00 0 
+7f0330021000-7f0334000000 ---p 00000000 00:00 0 
+7f0334000000-7f0334021000 rw-p 00000000 00:00 0 
+7f0334021000-7f0338000000 ---p 00000000 00:00 0 
+7f0338000000-7f0338021000 rw-p 00000000 00:00 0 
+7f0338021000-7f033c000000 ---p 00000000 00:00 0 
+7f033c04c000-7f033c04d000 ---p 00000000 00:00 0 
+7f033c04d000-7f033c0cd000 rw-p 00000000 00:00 0 
+7f033c0cd000-7f033c0d0000 ---p 00000000 00:00 0 
+7f033c0d0000-7f033c1ce000 rw-p 00000000 00:00 0                          [stack:13968]
+7f033c1ce000-7f033c1d1000 ---p 00000000 00:00 0 
+7f033c1d1000-7f033c2cf000 rw-p 00000000 00:00 0                          [stack:13967]
+7f033c2cf000-7f033c2d2000 ---p 00000000 00:00 0 
+7f033c2d2000-7f033c3d0000 rw-p 00000000 00:00 0                          [stack:13966]
+7f033c3d0000-7f033c3d3000 ---p 00000000 00:00 0 
+7f033c3d3000-7f033c4d1000 rw-p 00000000 00:00 0                          [stack:13965]
+7f033c4d1000-7f033c4d4000 ---p 00000000 00:00 0 
+7f033c4d4000-7f033c5d2000 rw-p 00000000 00:00 0                          [stack:13964]
+7f033c5d2000-7f033c5d8000 r-xp 00000000 08:01 793153                     /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f033c5d8000-7f033c7d7000 ---p 00006000 08:01 793153                     /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f033c7d7000-7f033c7d8000 r--p 00005000 08:01 793153                     /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f033c7d8000-7f033c7d9000 rw-p 00006000 08:01 793153                     /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f033c7d9000-7f033c804000 r-xp 00000000 08:01 793309                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f033c804000-7f033ca03000 ---p 0002b000 08:01 793309                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f033ca03000-7f033ca04000 r--p 0002a000 08:01 793309                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f033ca04000-7f033ca05000 rw-p 0002b000 08:01 793309                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f033ca05000-7f033ccb8000 r-xp 00000000 08:01 793311                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f033ccb8000-7f033ceb7000 ---p 002b3000 08:01 793311                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f033ceb7000-7f033ced3000 r--p 002b2000 08:01 793311                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f033ced3000-7f033ced4000 rw-p 002ce000 08:01 793311                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f033ced4000-7f033cf1c000 r-xp 00000000 08:01 792751                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f033cf1c000-7f033d11c000 ---p 00048000 08:01 792751                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f033d11c000-7f033d11d000 r--p 00048000 08:01 792751                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f033d11d000-7f033d11e000 rw-p 00049000 08:01 792751                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f033d11e000-7f033d160000 r-xp 00000000 08:01 12065358                   /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+7f033d160000-7f033d360000 ---p 00042000 08:01 12065358                   /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+7f033d360000-7f033d361000 r--p 00042000 08:01 12065358                   /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+7f033d361000-7f033d362000 rw-p 00043000 08:01 12065358                   /lib/x86_64-linux-gnu/libdbus-1.so.3.5.8
+7f033d362000-7f033d377000 r-xp 00000000 08:01 12062220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f033d377000-7f033d576000 ---p 00015000 08:01 12062220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f033d576000-7f033d577000 r--p 00014000 08:01 12062220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f033d577000-7f033d578000 rw-p 00015000 08:01 12062220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f033d578000-7f033d65a000 r-xp 00000000 08:01 793264                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f033d65a000-7f033d859000 ---p 000e2000 08:01 793264                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f033d859000-7f033d861000 r--p 000e1000 08:01 793264                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f033d861000-7f033d863000 rw-p 000e9000 08:01 793264                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f033d863000-7f033d878000 rw-p 00000000 00:00 0 
+7f033d878000-7f033d9dc000 r-xp 00000000 08:01 794414                     /usr/lib/libfftw3f.so.3.3.0
+7f033d9dc000-7f033dbdb000 ---p 00164000 08:01 794414                     /usr/lib/libfftw3f.so.3.3.0
+7f033dbdb000-7f033dbe7000 r--p 00163000 08:01 794414                     /usr/lib/libfftw3f.so.3.3.0
+7f033dbe7000-7f033dbe8000 rw-p 0016f000 08:01 794414                     /usr/lib/libfftw3f.so.3.3.0
+7f033dbe8000-7f033dc29000 r-xp 00000000 08:01 793078                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f033dc29000-7f033de29000 ---p 00041000 08:01 793078                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f033de29000-7f033de2b000 r--p 00041000 08:01 793078                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f033de2b000-7f033de2c000 rw-p 00043000 08:01 793078                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f033de2c000-7f033de8c000 r-xp 00000000 08:01 793246                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f033de8c000-7f033e08c000 ---p 00060000 08:01 793246                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f033e08c000-7f033e08e000 r--p 00060000 08:01 793246                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f033e08e000-7f033e08f000 rw-p 00062000 08:01 793246                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f033e08f000-7f033e093000 rw-p 00000000 00:00 0 
+7f033e093000-7f033e0a3000 r-xp 00000000 08:01 792834                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f033e0a3000-7f033e2a2000 ---p 00010000 08:01 792834                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f033e2a2000-7f033e2a3000 r--p 0000f000 08:01 792834                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f033e2a3000-7f033e2a4000 rw-p 00010000 08:01 792834                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f033e2a4000-7f033e2af000 r-xp 00000000 08:01 792836                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f033e2af000-7f033e4ae000 ---p 0000b000 08:01 792836                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f033e4ae000-7f033e4af000 r--p 0000a000 08:01 792836                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f033e4af000-7f033e4b0000 rw-p 0000b000 08:01 792836                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f033e4b0000-7f033e512000 r-xp 00000000 08:01 8531027                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/libscsynth.so
+7f033e512000-7f033e712000 ---p 00062000 08:01 8531027                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/libscsynth.so
+7f033e712000-7f033e714000 r--p 00062000 08:01 8531027                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/libscsynth.so
+7f033e714000-7f033e716000 rw-p 00064000 08:01 8531027                    /home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64/libscsynth.so
+7f033e716000-7f033e736000 rw-p 00000000 00:00 0 
+7f033e736000-7f033e74d000 r-xp 00000000 08:01 12332696                   /tmp/jna/jna2952657855372976955.tmp (deleted)
+7f033e74d000-7f033e94c000 ---p 00017000 08:01 12332696                   /tmp/jna/jna2952657855372976955.tmp (deleted)
+7f033e94c000-7f033e94d000 r--p 00016000 08:01 12332696                   /tmp/jna/jna2952657855372976955.tmp (deleted)
+7f033e94d000-7f033e94e000 rw-p 00017000 08:01 12332696                   /tmp/jna/jna2952657855372976955.tmp (deleted)
+7f033e94e000-7f033e953000 r-xp 00000000 08:01 792775                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f033e953000-7f033eb52000 ---p 00005000 08:01 792775                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f033eb52000-7f033eb53000 r--p 00004000 08:01 792775                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f033eb53000-7f033eb54000 rw-p 00005000 08:01 792775                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f033eb54000-7f033eb56000 r-xp 00000000 08:01 792764                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f033eb56000-7f033ed55000 ---p 00002000 08:01 792764                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f033ed55000-7f033ed56000 r--p 00001000 08:01 792764                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f033ed56000-7f033ed57000 rw-p 00002000 08:01 792764                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f033ed57000-7f033ed74000 r-xp 00000000 08:01 788219                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f033ed74000-7f033ef73000 ---p 0001d000 08:01 788219                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f033ef73000-7f033ef74000 r--p 0001c000 08:01 788219                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f033ef74000-7f033ef75000 rw-p 0001d000 08:01 788219                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f033ef75000-7f033ef83000 r-xp 00000000 08:01 792783                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f033ef83000-7f033f182000 ---p 0000e000 08:01 792783                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f033f182000-7f033f183000 r--p 0000d000 08:01 792783                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f033f183000-7f033f184000 rw-p 0000e000 08:01 792783                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f033f184000-7f033f189000 r-xp 00000000 08:01 792803                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f033f189000-7f033f388000 ---p 00005000 08:01 792803                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f033f388000-7f033f389000 r--p 00004000 08:01 792803                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f033f389000-7f033f38a000 rw-p 00005000 08:01 792803                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f033f38a000-7f033f393000 r-xp 00000000 08:01 792797                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f033f393000-7f033f592000 ---p 00009000 08:01 792797                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f033f592000-7f033f593000 r--p 00008000 08:01 792797                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f033f593000-7f033f594000 rw-p 00009000 08:01 792797                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f033f594000-7f033f6c3000 r-xp 00000000 08:01 792762                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f033f6c3000-7f033f8c3000 ---p 0012f000 08:01 792762                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f033f8c3000-7f033f8c4000 r--p 0012f000 08:01 792762                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f033f8c4000-7f033f8c8000 rw-p 00130000 08:01 792762                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f033f8c8000-7f033f8d8000 r-xp 00000000 08:01 792777                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f033f8d8000-7f033fad7000 ---p 00010000 08:01 792777                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f033fad7000-7f033fad8000 r--p 0000f000 08:01 792777                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f033fad8000-7f033fad9000 rw-p 00010000 08:01 792777                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f033fad9000-7f033fb29000 r-xp 00000000 08:01 3811587                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/xawt/libmawt.so
+7f033fb29000-7f033fd29000 ---p 00050000 08:01 3811587                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/xawt/libmawt.so
+7f033fd29000-7f033fd2d000 rw-p 00050000 08:01 3811587                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/xawt/libmawt.so
+7f033fd2d000-7f033fd2e000 rw-p 00000000 00:00 0 
+7f033fd2e000-7f033fdd0000 r-xp 00000000 08:01 3811553                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libawt.so
+7f033fdd0000-7f033ffd0000 ---p 000a2000 08:01 3811553                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libawt.so
+7f033ffd0000-7f033ffdc000 rw-p 000a2000 08:01 3811553                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libawt.so
+7f033ffdc000-7f0340000000 rw-p 00000000 00:00 0 
+7f0340000000-7f0340021000 rw-p 00000000 00:00 0 
+7f0340021000-7f0344000000 ---p 00000000 00:00 0 
+7f0344000000-7f034478b000 rw-p 00000000 00:00 0 
+7f034478b000-7f0348000000 ---p 00000000 00:00 0 
+7f0348000000-7f0348021000 rw-p 00000000 00:00 0 
+7f0348021000-7f034c000000 ---p 00000000 00:00 0 
+7f034c000000-7f034c021000 rw-p 00000000 00:00 0 
+7f034c021000-7f0350000000 ---p 00000000 00:00 0 
+7f0350000000-7f0350079000 rw-p 00000000 00:00 0 
+7f0350079000-7f0354000000 ---p 00000000 00:00 0 
+7f0354000000-7f03544f4000 rw-p 00000000 00:00 0 
+7f03544f4000-7f0358000000 ---p 00000000 00:00 0 
+7f0358000000-7f0358021000 rw-p 00000000 00:00 0 
+7f0358021000-7f035c000000 ---p 00000000 00:00 0 
+7f035c000000-7f035c021000 rw-p 00000000 00:00 0 
+7f035c021000-7f0360000000 ---p 00000000 00:00 0 
+7f0360000000-7f0362882000 rw-p 00000000 00:00 0 
+7f0362882000-7f0364000000 ---p 00000000 00:00 0 
+7f0364000000-7f0364b60000 rw-p 00000000 00:00 0 
+7f0364b60000-7f0368000000 ---p 00000000 00:00 0 
+7f0368000000-7f0368021000 rw-p 00000000 00:00 0 
+7f0368021000-7f036c000000 ---p 00000000 00:00 0 
+7f036c000000-7f036db44000 rw-p 00000000 00:00 0 
+7f036db44000-7f0370000000 ---p 00000000 00:00 0 
+7f0370000000-7f0370021000 rw-p 00000000 00:00 0 
+7f0370021000-7f0374000000 ---p 00000000 00:00 0 
+7f0374000000-7f0374021000 rw-p 00000000 00:00 0 
+7f0374021000-7f0378000000 ---p 00000000 00:00 0 
+7f0378000000-7f0378026000 rw-p 00000000 00:00 0 
+7f0378026000-7f037c000000 ---p 00000000 00:00 0 
+7f037c000000-7f037c061000 rw-p 00000000 00:00 0 
+7f037c061000-7f0380000000 ---p 00000000 00:00 0 
+7f0380000000-7f0380021000 rw-p 00000000 00:00 0 
+7f0380021000-7f0384000000 ---p 00000000 00:00 0 
+7f0384000000-7f0384021000 rw-p 00000000 00:00 0 
+7f0384021000-7f0388000000 ---p 00000000 00:00 0 
+7f0388000000-7f0388021000 rw-p 00000000 00:00 0 
+7f0388021000-7f038c000000 ---p 00000000 00:00 0 
+7f038c042000-7f038c045000 ---p 00000000 00:00 0 
+7f038c045000-7f038c06a000 rw-p 00000000 00:00 0 
+7f038c06a000-7f038c07c000 rw-s 00000000 00:12 2665530                    /run/shm/jack-shm-registry
+7f038c07c000-7f038c083000 r--s 00000000 08:01 927300                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f038c083000-7f038c086000 ---p 00000000 00:00 0 
+7f038c086000-7f038c184000 rw-p 00000000 00:00 0                          [stack:13963]
+7f038c184000-7f038c187000 ---p 00000000 00:00 0 
+7f038c187000-7f038c285000 rw-p 00000000 00:00 0                          [stack:14261]
+7f038c285000-7f038c288000 ---p 00000000 00:00 0 
+7f038c288000-7f038c386000 rw-p 00000000 00:00 0                          [stack:13947]
+7f038c386000-7f038c389000 ---p 00000000 00:00 0 
+7f038c389000-7f038c487000 rw-p 00000000 00:00 0                          [stack:13946]
+7f038c487000-7f038c48a000 ---p 00000000 00:00 0 
+7f038c48a000-7f038c588000 rw-p 00000000 00:00 0                          [stack:13945]
+7f038c588000-7f038c58b000 ---p 00000000 00:00 0 
+7f038c58b000-7f038c689000 rw-p 00000000 00:00 0 
+7f038c689000-7f038c68c000 ---p 00000000 00:00 0 
+7f038c68c000-7f038c78a000 rw-p 00000000 00:00 0                          [stack:14262]
+7f038c78a000-7f038c79f000 r-xp 00000000 08:01 3811547                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnet.so
+7f038c79f000-7f038c99f000 ---p 00015000 08:01 3811547                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnet.so
+7f038c99f000-7f038c9a0000 rw-p 00015000 08:01 3811547                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnet.so
+7f038c9a0000-7f038c9b0000 r-xp 00000000 08:01 3811580                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnio.so
+7f038c9b0000-7f038cbb0000 ---p 00010000 08:01 3811580                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnio.so
+7f038cbb0000-7f038cbb1000 rw-p 00010000 08:01 3811580                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnio.so
+7f038cbb1000-7f038cbed000 r--s 00308000 08:01 141106                     /home/matth/.m2/repository/org/clojure/clojure/1.4.0/clojure-1.4.0.jar
+7f038cbed000-7f038cbf2000 r--s 0005f000 08:01 144826                     /home/matth/.m2/repository/overtone/overtone/0.8.1/overtone-0.8.1.jar
+7f038cbf2000-7f038cbf3000 r--s 00000000 08:01 144846                     /home/matth/.m2/repository/j18n/j18n/1.0.1/j18n-1.0.1.jar
+7f038cbf3000-7f038cbf4000 r--s 00001000 08:01 144835                     /home/matth/.m2/repository/overtone/midi-clj/0.5.0/midi-clj-0.5.0.jar
+7f038cbf4000-7f038cbf8000 r--s 00b46000 08:01 144837                     /home/matth/.m2/repository/overtone/scsynth/3.5.7.0/scsynth-3.5.7.0.jar
+7f038cbf8000-7f038cbf9000 r--s 00000000 08:01 144842                     /home/matth/.m2/repository/clj-glob/clj-glob/1.0.0/clj-glob-1.0.0.jar
+7f038cbf9000-7f038cbfd000 r--s 0002f000 08:01 144551                     /home/matth/.m2/repository/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar
+7f038cbfd000-7f038cbff000 r--s 0001d000 08:01 144843                     /home/matth/.m2/repository/seesaw/seesaw/1.4.2/seesaw-1.4.2.jar
+7f038cbff000-7f038cc01000 r--s 0001b000 08:01 664569                     /home/matth/.m2/repository/com/jgoodies/forms/1.2.1/forms-1.2.1.jar
+7f038cc01000-7f038cc05000 r--s 00b6f000 08:01 144838                     /home/matth/.m2/repository/overtone/scsynth-extras/3.5.7.0/scsynth-extras-3.5.7.0.jar
+7f038cc05000-7f038cc06000 r--s 00008000 08:01 144819                     /home/matth/.m2/repository/org/clojure/tools.nrepl/0.2.0-beta9/tools.nrepl-0.2.0-beta9.jar
+7f038cc06000-7f038cc08000 r--s 00008000 08:01 144564                     /home/matth/.m2/repository/org/swinglabs/swingx/swingx-autocomplete/1.6.3/swingx-autocomplete-1.6.3.jar
+7f038cc08000-7f038cc09000 r--s 00000000 08:01 277035                     /home/matth/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0.jar
+7f038cc09000-7f038cc0a000 r--s 00001000 08:01 144827                     /home/matth/.m2/repository/overtone/at-at/1.1.1/at-at-1.1.1.jar
+7f038cc0a000-7f038cc0e000 r--s 000f3000 08:01 141694                     /home/matth/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar
+7f038cc0e000-7f038cc12000 r--s 0002e000 08:01 664570                     /home/matth/.m2/repository/com/miglayout/miglayout/3.7.4/miglayout-3.7.4.jar
+7f038cc12000-7f038cc13000 r--s 00007000 08:01 144787                     /home/matth/.m2/repository/org/swinglabs/swingx/swingx-action/1.6.3/swingx-action-1.6.3.jar
+7f038cc13000-7f038cc14000 r--s 00001000 08:01 141693                     /home/matth/.m2/repository/org/clojure/data.json/0.1.2/data.json-0.1.2.jar
+7f038cc14000-7f038cc16000 r--s 00000000 08:01 144828                     /home/matth/.m2/repository/overtone/byte-spec/0.3.1/byte-spec-0.3.1.jar
+7f038cc16000-7f038cc18000 r--s 0000f000 08:01 144789                     /home/matth/.m2/repository/org/swinglabs/swingx/swingx-painters/1.6.3/swingx-painters-1.6.3.jar
+7f038cc18000-7f038cc19000 ---p 00000000 00:00 0 
+7f038cc19000-7f038cd19000 rw-p 00000000 00:00 0                          [stack:13940]
+7f038cd19000-7f038cd1c000 ---p 00000000 00:00 0 
+7f038cd1c000-7f038ce1a000 rw-p 00000000 00:00 0                          [stack:13939]
+7f038ce1a000-7f038ce1d000 ---p 00000000 00:00 0 
+7f038ce1d000-7f038cf1b000 rw-p 00000000 00:00 0                          [stack:13938]
+7f038cf1b000-7f038cf1e000 ---p 00000000 00:00 0 
+7f038cf1e000-7f038d01c000 rw-p 00000000 00:00 0                          [stack:13937]
+7f038d01c000-7f038d01f000 ---p 00000000 00:00 0 
+7f038d01f000-7f038d11d000 rw-p 00000000 00:00 0                          [stack:13936]
+7f038d11d000-7f038d120000 ---p 00000000 00:00 0 
+7f038d120000-7f038d21e000 rw-p 00000000 00:00 0                          [stack:13935]
+7f038d21e000-7f038d907000 r--p 00000000 08:01 791233                     /usr/lib/locale/locale-archive
+7f038d907000-7f038d90a000 ---p 00000000 00:00 0 
+7f038d90a000-7f038da08000 rw-p 00000000 00:00 0                          [stack:13934]
+7f038da08000-7f038da0b000 ---p 00000000 00:00 0 
+7f038da0b000-7f038db09000 rw-p 00000000 00:00 0                          [stack:13933]
+7f038db09000-7f038db0a000 ---p 00000000 00:00 0 
+7f038db0a000-7f0392000000 rw-p 00000000 00:00 0                          [stack:13932]
+7f0392000000-7f0393120000 rwxp 00000000 00:00 0 
+7f0393120000-7f03989a8000 rw-p 00000000 00:00 0 
+7f03989a8000-7f039c000000 ---p 00000000 00:00 0 
+7f039c006000-7f039ca94000 rw-p 00000000 00:00 0 
+7f039ca94000-7f039cc50000 r--s 039dc000 08:01 3811602                    /usr/lib/jvm/java-7-oracle/jre/lib/rt.jar
+7f039cc50000-7f039dc04000 rw-p 00000000 00:00 0 
+7f039dc04000-7f039dc05000 ---p 00000000 00:00 0 
+7f039dc05000-7f039dd05000 rw-p 00000000 00:00 0                          [stack:13929]
+7f039dd05000-7f039dd06000 ---p 00000000 00:00 0 
+7f039dd06000-7f039de06000 rw-p 00000000 00:00 0                          [stack:13928]
+7f039de06000-7f039de07000 ---p 00000000 00:00 0 
+7f039de07000-7f039df07000 rw-p 00000000 00:00 0                          [stack:13927]
+7f039df07000-7f039df08000 ---p 00000000 00:00 0 
+7f039df08000-7f039e01d000 rw-p 00000000 00:00 0                          [stack:13926]
+7f039e01d000-7f039e031000 rw-p 00000000 00:00 0 
+7f039e031000-7f039e05a000 rw-p 00000000 00:00 0 
+7f039e05a000-7f039e2b4000 rw-p 00000000 00:00 0 
+7f039e2b4000-7f039e2c9000 rw-p 00000000 00:00 0 
+7f039e2c9000-7f039e2dd000 rw-p 00000000 00:00 0 
+7f039e2dd000-7f039e306000 rw-p 00000000 00:00 0 
+7f039e306000-7f039e55f000 rw-p 00000000 00:00 0 
+7f039e55f000-7f039e67f000 rw-p 00000000 00:00 0 
+7f039e67f000-7f039e6a1000 ---p 00000000 00:00 0 
+7f039e6a1000-7f039e6e7000 rw-p 00000000 00:00 0 
+7f039e6e7000-7f039e822000 rw-p 00000000 00:00 0 
+7f039e822000-7f039e83c000 r-xp 00000000 08:01 3811552                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libzip.so
+7f039e83c000-7f039ea3c000 ---p 0001a000 08:01 3811552                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libzip.so
+7f039ea3c000-7f039ea3d000 rw-p 0001a000 08:01 3811552                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libzip.so
+7f039ea3d000-7f039ea49000 r-xp 00000000 08:01 12073017                   /lib/x86_64-linux-gnu/libnss_files-2.15.so
+7f039ea49000-7f039ec48000 ---p 0000c000 08:01 12073017                   /lib/x86_64-linux-gnu/libnss_files-2.15.so
+7f039ec48000-7f039ec49000 r--p 0000b000 08:01 12073017                   /lib/x86_64-linux-gnu/libnss_files-2.15.so
+7f039ec49000-7f039ec4a000 rw-p 0000c000 08:01 12073017                   /lib/x86_64-linux-gnu/libnss_files-2.15.so
+7f039ec4a000-7f039ec54000 r-xp 00000000 08:01 12073013                   /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+7f039ec54000-7f039ee54000 ---p 0000a000 08:01 12073013                   /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+7f039ee54000-7f039ee55000 r--p 0000a000 08:01 12073013                   /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+7f039ee55000-7f039ee56000 rw-p 0000b000 08:01 12073013                   /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+7f039ee56000-7f039ee6d000 r-xp 00000000 08:01 12073026                   /lib/x86_64-linux-gnu/libnsl-2.15.so
+7f039ee6d000-7f039f06c000 ---p 00017000 08:01 12073026                   /lib/x86_64-linux-gnu/libnsl-2.15.so
+7f039f06c000-7f039f06d000 r--p 00016000 08:01 12073026                   /lib/x86_64-linux-gnu/libnsl-2.15.so
+7f039f06d000-7f039f06e000 rw-p 00017000 08:01 12073026                   /lib/x86_64-linux-gnu/libnsl-2.15.so
+7f039f06e000-7f039f070000 rw-p 00000000 00:00 0 
+7f039f070000-7f039f078000 r-xp 00000000 08:01 12073018                   /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+7f039f078000-7f039f277000 ---p 00008000 08:01 12073018                   /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+7f039f277000-7f039f278000 r--p 00007000 08:01 12073018                   /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+7f039f278000-7f039f279000 rw-p 00008000 08:01 12073018                   /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+7f039f279000-7f039f2a2000 r-xp 00000000 08:01 3811568                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjava.so
+7f039f2a2000-7f039f4a2000 ---p 00029000 08:01 3811568                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjava.so
+7f039f4a2000-7f039f4a4000 rw-p 00029000 08:01 3811568                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libjava.so
+7f039f4a4000-7f039f4b1000 r-xp 00000000 08:01 3811574                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libverify.so
+7f039f4b1000-7f039f6b0000 ---p 0000d000 08:01 3811574                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libverify.so
+7f039f6b0000-7f039f6b2000 rw-p 0000c000 08:01 3811574                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libverify.so
+7f039f6b2000-7f039f6b9000 r-xp 00000000 08:01 12073011                   /lib/x86_64-linux-gnu/librt-2.15.so
+7f039f6b9000-7f039f8b8000 ---p 00007000 08:01 12073011                   /lib/x86_64-linux-gnu/librt-2.15.so
+7f039f8b8000-7f039f8b9000 r--p 00006000 08:01 12073011                   /lib/x86_64-linux-gnu/librt-2.15.so
+7f039f8b9000-7f039f8ba000 rw-p 00007000 08:01 12073011                   /lib/x86_64-linux-gnu/librt-2.15.so
+7f039f8ba000-7f039f9b5000 r-xp 00000000 08:01 12073015                   /lib/x86_64-linux-gnu/libm-2.15.so
+7f039f9b5000-7f039fbb4000 ---p 000fb000 08:01 12073015                   /lib/x86_64-linux-gnu/libm-2.15.so
+7f039fbb4000-7f039fbb5000 r--p 000fa000 08:01 12073015                   /lib/x86_64-linux-gnu/libm-2.15.so
+7f039fbb5000-7f039fbb6000 rw-p 000fb000 08:01 12073015                   /lib/x86_64-linux-gnu/libm-2.15.so
+7f039fbb6000-7f03a05fd000 r-xp 00000000 08:01 3811559                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/server/libjvm.so
+7f03a05fd000-7f03a07fd000 ---p 00a47000 08:01 3811559                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/server/libjvm.so
+7f03a07fd000-7f03a08a0000 rw-p 00a47000 08:01 3811559                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/server/libjvm.so
+7f03a08a0000-7f03a08dc000 rw-p 00000000 00:00 0 
+7f03a08dc000-7f03a0a91000 r-xp 00000000 08:01 12073007                   /lib/x86_64-linux-gnu/libc-2.15.so
+7f03a0a91000-7f03a0c90000 ---p 001b5000 08:01 12073007                   /lib/x86_64-linux-gnu/libc-2.15.so
+7f03a0c90000-7f03a0c94000 r--p 001b4000 08:01 12073007                   /lib/x86_64-linux-gnu/libc-2.15.so
+7f03a0c94000-7f03a0c96000 rw-p 001b8000 08:01 12073007                   /lib/x86_64-linux-gnu/libc-2.15.so
+7f03a0c96000-7f03a0c9b000 rw-p 00000000 00:00 0 
+7f03a0c9b000-7f03a0c9d000 r-xp 00000000 08:01 12073006                   /lib/x86_64-linux-gnu/libdl-2.15.so
+7f03a0c9d000-7f03a0e9d000 ---p 00002000 08:01 12073006                   /lib/x86_64-linux-gnu/libdl-2.15.so
+7f03a0e9d000-7f03a0e9e000 r--p 00002000 08:01 12073006                   /lib/x86_64-linux-gnu/libdl-2.15.so
+7f03a0e9e000-7f03a0e9f000 rw-p 00003000 08:01 12073006                   /lib/x86_64-linux-gnu/libdl-2.15.so
+7f03a0e9f000-7f03a0eb5000 r-xp 00000000 08:01 3811537                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/jli/libjli.so
+7f03a0eb5000-7f03a10b5000 ---p 00016000 08:01 3811537                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/jli/libjli.so
+7f03a10b5000-7f03a10b6000 rw-p 00016000 08:01 3811537                    /usr/lib/jvm/java-7-oracle/jre/lib/amd64/jli/libjli.so
+7f03a10b6000-7f03a10ce000 r-xp 00000000 08:01 12073009                   /lib/x86_64-linux-gnu/libpthread-2.15.so
+7f03a10ce000-7f03a12cd000 ---p 00018000 08:01 12073009                   /lib/x86_64-linux-gnu/libpthread-2.15.so
+7f03a12cd000-7f03a12ce000 r--p 00017000 08:01 12073009                   /lib/x86_64-linux-gnu/libpthread-2.15.so
+7f03a12ce000-7f03a12cf000 rw-p 00018000 08:01 12073009                   /lib/x86_64-linux-gnu/libpthread-2.15.so
+7f03a12cf000-7f03a12d3000 rw-p 00000000 00:00 0 
+7f03a12d3000-7f03a12f5000 r-xp 00000000 08:01 12073021                   /lib/x86_64-linux-gnu/ld-2.15.so
+7f03a12f5000-7f03a12f6000 r--p 00000000 00:00 0 
+7f03a12f9000-7f03a1303000 r--s 00254000 08:01 3811491                    /usr/lib/jvm/java-7-oracle/jre/lib/resources.jar
+7f03a1303000-7f03a130d000 r--s 00371000 08:01 3811524                    /usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar
+7f03a130d000-7f03a130f000 r--s 00007000 08:01 144567                     /home/matth/.m2/repository/org/swinglabs/swingx/swingx-common/1.6.3/swingx-common-1.6.3.jar
+7f03a130f000-7f03a1310000 r--s 00001000 08:01 144836                     /home/matth/.m2/repository/overtone/libs.handlers/0.2.0/libs.handlers-0.2.0.jar
+7f03a1310000-7f03a1311000 r--s 00004000 08:01 144830                     /home/matth/.m2/repository/overtone/osc-clj/0.9.0/osc-clj-0.9.0.jar
+7f03a1311000-7f03a131a000 r--s 000b0000 08:01 272335                     /home/matth/.m2/repository/org/fife/ui/rsyntaxtextarea/2.0.3/rsyntaxtextarea-2.0.3.jar
+7f03a131a000-7f03a131f000 r--s 0003d000 08:01 142072                     /home/matth/.m2/repository/commons-net/commons-net/3.0.1/commons-net-3.0.1.jar
+7f03a131f000-7f03a1320000 r--s 00004000 08:01 277039                     /home/matth/.m2/repository/org/clojure/core.logic/0.6.5/core.logic-0.6.5.jar
+7f03a1320000-7f03a1321000 r--s 00005000 08:01 144829                     /home/matth/.m2/repository/clj-native/clj-native/0.9.3/clj-native-0.9.3.jar
+7f03a1321000-7f03a1324000 r--s 00008000 08:01 144569                     /home/matth/.m2/repository/org/swinglabs/swingx/swingx-plaf/1.6.3/swingx-plaf-1.6.3.jar
+7f03a1324000-7f03a133b000 r--s 00113000 08:01 144565                     /home/matth/.m2/repository/org/swinglabs/swingx/swingx-core/1.6.3/swingx-core-1.6.3.jar
+7f03a133b000-7f03a13d3000 rw-p 00000000 00:00 0 
+7f03a13d3000-7f03a13d6000 ---p 00000000 00:00 0 
+7f03a13d6000-7f03a14d8000 rw-p 00000000 00:00 0                          [stack:13925]
+7f03a14da000-7f03a14db000 rw-p 00000000 00:00 0 
+7f03a14db000-7f03a14de000 r--p 00000000 08:01 1977968                    /usr/share/locale-langpack/en_GB/LC_MESSAGES/pulseaudio.mo
+7f03a14de000-7f03a14df000 rwxp 00000000 00:00 0 
+7f03a14df000-7f03a14e2000 r--s 000f7000 08:01 3811617                    /usr/lib/jvm/java-7-oracle/jre/lib/ext/localedata.jar
+7f03a14e2000-7f03a14e3000 r--p 00000000 08:01 1978143                    /usr/share/locale-langpack/en_GB/LC_MESSAGES/libc.mo
+7f03a14e3000-7f03a14e7000 r--s 0008a000 08:01 3811490                    /usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar
+7f03a14e7000-7f03a14e8000 r--s 00001000 08:01 144821                     /home/matth/.m2/repository/clojure-complete/clojure-complete/0.2.1/clojure-complete-0.2.1.jar
+7f03a14e8000-7f03a14e9000 r--s 00005000 08:01 272333                     /home/matth/.m2/repository/org/clojure/core.match/0.2.0-alpha11/core.match-0.2.0-alpha11.jar
+7f03a14e9000-7f03a14f1000 rw-s 00000000 08:01 12461517                   /tmp/hsperfdata_matth/13923
+7f03a14f1000-7f03a14f2000 rw-p 00000000 00:00 0 
+7f03a14f2000-7f03a14f3000 r--p 00000000 00:00 0 
+7f03a14f3000-7f03a14f5000 rw-p 00000000 00:00 0 
+7f03a14f5000-7f03a14f6000 r--p 00022000 08:01 12073021                   /lib/x86_64-linux-gnu/ld-2.15.so
+7f03a14f6000-7f03a14f8000 rw-p 00023000 08:01 12073021                   /lib/x86_64-linux-gnu/ld-2.15.so
+7fffd1db2000-7fffd1dd4000 rw-p 00000000 00:00 0                          [stack]
+7fffd1dff000-7fffd1e00000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -XX:+TieredCompilation -Dclojure.compile.path=/home/matth/code/projects/clj-overtone-learning/target/classes -Dclj-overtone-learning.version=0.1.0-SNAPSHOT -Dclojure.debug=false -Djava.library.path=/home/matth/code/projects/clj-overtone-learning/target/native/linux/x86_64 
+java_command: clojure.main -e (do (clojure.core/require (quote clojure.tools.nrepl.server) (quote complete.core)) (set! *warn-on-reflection* nil) (clojure.core/let [server__1765__auto__ (clojure.tools.nrepl.server/start-server :bind "127.0.0.1" :port 0 :ack-port nil :handler (clojure.tools.nrepl.server/default-handler)) port__1766__auto__ (clojure.core/-> server__1765__auto__ clojure.core/deref :ss .getLocalPort)] (clojure.core/println "nREPL server started on port" port__1766__auto__) (clojure.core/spit "/home/matth/code/projects/clj-overtone-learning/target/repl-port" port__1766__auto__) (clojure.core/deref (clojure.core/promise))))
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/matth/bin:/home/matth/perl5/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/matth/.rvm/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x8a5d70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x8a5d70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x7417a0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:wheezy/sid
+
+uname:Linux 3.4.0-030400-generic #201205210521 SMP Mon May 21 09:22:02 UTC 2012 x86_64
+libc:glibc 2.15 NPTL 2.15 
+rlimit: STACK 8515k, CORE 0k, NPROC 61548, NOFILE 4096, AS infinity
+load average:1.10 1.50 2.45
+
+/proc/meminfo:
+MemTotal:        7895816 kB
+MemFree:         1179196 kB
+Buffers:          814144 kB
+Cached:          2334184 kB
+SwapCached:            8 kB
+Active:          4197656 kB
+Inactive:        1906248 kB
+Active(anon):    2738456 kB
+Inactive(anon):   595560 kB
+Active(file):    1459200 kB
+Inactive(file):  1310688 kB
+Unevictable:           4 kB
+Mlocked:               4 kB
+SwapTotal:       8102908 kB
+SwapFree:        8102900 kB
+Dirty:             13984 kB
+Writeback:             0 kB
+AnonPages:       2955400 kB
+Mapped:           286492 kB
+Shmem:            378440 kB
+Slab:             451608 kB
+SReclaimable:     411216 kB
+SUnreclaim:        40392 kB
+KernelStack:        6224 kB
+PageTables:        57448 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12050816 kB
+Committed_AS:    8276612 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      368748 kB
+VmallocChunk:   34359327100 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       70144 kB
+DirectMap2M:     8036352 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5787.15
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5787.15
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5787.15
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 2901.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5787.15
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 7895816k(1179196k free), swap 8102908k(8102900k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (23.7-b01) for linux-amd64 JRE (1.7.0_17-b02), built on Mar  1 2013 02:59:06 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Fri Mar  8 16:14:32 2013
+elapsed time: 702 seconds
+
